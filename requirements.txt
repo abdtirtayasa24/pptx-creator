@@ -1,2 +1,2 @@
-markitdown[pptx]
+markitdown[pptx,docx,xlsx,xls,pdf]
 Pillow

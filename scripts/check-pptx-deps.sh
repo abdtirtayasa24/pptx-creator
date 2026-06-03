@@ -7,6 +7,12 @@ import importlib.util
 deps = {
     "markitdown": "markitdown",
     "Pillow": "PIL",
+    "mammoth (Word/docx support)": "mammoth",
+    "pandas (Excel support)": "pandas",
+    "openpyxl (xlsx support)": "openpyxl",
+    "xlrd (xls support)": "xlrd",
+    "pdfminer-six (PDF support)": "pdfminer",
+    "pdfplumber (PDF support)": "pdfplumber",
 }
 
 missing = []

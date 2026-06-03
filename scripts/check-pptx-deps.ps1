@@ -2,9 +2,9 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "Checking Python dependencies..."
 
-python -c "import markitdown, PIL; print('Python dependencies OK')"
+python -c "import markitdown, PIL, mammoth, pandas, openpyxl, xlrd, pdfminer, pdfplumber; print('Python dependencies OK')"
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "Missing Python dependencies. Install with: pip install `"markitdown[pptx]`" Pillow"
+    Write-Error "Missing Python dependencies. Install with: pip install -r requirements.txt"
     exit 1
 }
 

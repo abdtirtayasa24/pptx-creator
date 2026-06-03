@@ -17,6 +17,13 @@ license: Proprietary. LICENSE.txt has complete terms
 
 ---
 
+## Default Project Paths
+
+Unless the user explicitly provides another path:
+
+- Scan source documents for PPTX creation in `docs/`.
+- Write generated PPTX files and intermediate/generated assets to `generated/`.
+
 ## Dependency Policy
 
 Dependencies are environment-level prerequisites.
@@ -243,7 +250,7 @@ Do not install dependencies during normal skill execution.
 
 Required Python packages:
 
-- `markitdown[pptx]` — text extraction from `.pptx`
+- `markitdown[pptx,docx,xlsx,xls,pdf]` — text extraction from `.pptx`, `.docx`, `.xlsx`, `.xls`, and `.pdf`
 - `Pillow` — thumbnail grid generation
 
 Required Node package:
