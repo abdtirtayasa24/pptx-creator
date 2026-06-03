@@ -1,0 +1,11 @@
+{
+    "name": "pptx-skills-runtime",
+    "private": true,
+    "dependencies": {
+        "pptxgenjs": "^4.0.0"
+    },
+    "scripts": {
+        "check:pptx": "bash scripts/check-pptx-deps.sh",
+        "check:pptx:win": "powershell -ExecutionPolicy Bypass -File scripts/check-pptx-deps.ps1"
+    }
+}
