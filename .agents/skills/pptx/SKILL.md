@@ -21,8 +21,8 @@ license: Proprietary. LICENSE.txt has complete terms
 
 Unless the user explicitly provides another path:
 
-- Scan source documents for PPTX creation in `docs/`.
-- Write generated PPTX files and intermediate/generated assets to `generated/`.
+- Scan source documents for PPTX creation in `.docs/`.
+- Write generated PPTX files and intermediate/generated assets to `.generated/`.
 
 ## Dependency Policy
 

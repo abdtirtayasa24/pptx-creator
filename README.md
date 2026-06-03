@@ -51,6 +51,11 @@ With the declared Python dependencies, the content-ingestion layer can handle:
 │   └── *.md / *.pdf / *.docx / *.xlsx / ...
 ├── generated/
 │   └── generated decks, scripts, extracted text, QA renders
+├── demo/
+│   ├── docs/
+│   │   └── global-tiktok-instagram-addiction-(2015-2060)/
+│   └── generated/
+│       └── demo PPTX deck and QA/render artifacts
 ├── scripts/
 │   ├── check-pptx-deps.sh
 │   └── check-pptx-deps.ps1
@@ -207,6 +212,22 @@ Unless explicitly overridden by the user:
 - Extracted text and QA render artifacts live in `generated/`
 
 This keeps the repository predictable for repeated agent runs.
+
+## Demo
+
+A generated example PowerPoint deck is available in `demo/generated/`.
+The initial agent prompt used to execute this demo is available in `demo/demo_prompt.md`.
+The demo source CSV files are stored in:
+
+```text
+demo/docs/global-tiktok-instagram-addiction-(2015-2060)/
+```
+
+Those CSV files are from the Kaggle dataset **TikTok and Instagram Addiction Dataset (2015–2060)**:
+
+```text
+https://www.kaggle.com/datasets/abdulmaliklodhra/tiktok-and-instagram-addiction-dataset-20152060
+```
 
 ## Notes and Limitations
 
