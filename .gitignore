@@ -2,3 +2,4 @@ node_modules/
 .venv/
 .docs/
 .generated/
+__pycache__

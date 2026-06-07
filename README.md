@@ -18,8 +18,8 @@ The skill supports:
 - Editing existing `.pptx` files through Office Open XML unpack/edit/pack workflows
 - Reading and extracting content from `.pptx` using MarkItDown
 - Converting rendered slides to images for visual QA
-- Using `docs/` as the default source-document directory
-- Using `generated/` as the default output directory
+- Using `.docs/` as the default source-document directory
+- Using `.generated/` as the default output directory
 
 With the declared Python dependencies, the content-ingestion layer can handle:
 
@@ -47,9 +47,9 @@ With the declared Python dependencies, the content-ingestion layer can handle:
 │           ├── editing.md
 │           ├── pptxgenjs.md
 │           └── scripts/
-├── docs/
+├── .docs/
 │   └── *.md / *.pdf / *.docx / *.xlsx / ...
-├── generated/
+├── .generated/
 │   └── generated decks, scripts, extracted text, QA renders
 ├── demo/
 │   ├── docs/
@@ -61,6 +61,7 @@ With the declared Python dependencies, the content-ingestion layer can handle:
 │   └── check-pptx-deps.ps1
 ├── package.json
 ├── requirements.txt
+├── setup.py
 └── README.md
 ```
 
@@ -134,49 +135,37 @@ git clone https://github.com/abdtirtayasa24/pptx-creator.git
 cd pptx-creator
 ```
 
-### 2. Create and activate a Python environment
-
-Linux/macOS/Git Bash:
+### 2. Run the setup helper
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+python setup.py
 ```
 
-Windows PowerShell:
+The setup helper will:
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Install Python dependencies
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-### 4. Install Node dependencies
-
-```bash
-npm install
-```
-
-### 5. Verify the runtime
-
-Linux/macOS/Git Bash:
-
-```bash
-npm run check:pptx
-```
-
-Windows PowerShell:
-
-```powershell
-npm run check:pptx:win
-```
+- create `.docs/` for source documents if it does not exist
+- create `.generated/` for generated decks, scripts, extracted text, and QA artifacts if it does not exist
+- create `.venv/` if it does not exist
+- install Python dependencies from `requirements.txt`
+- install Node dependencies from `package.json`
+- run the platform-specific PPTX dependency check
 
 The dependency check validates Python packages, `pptxgenjs`, LibreOffice, and Poppler.
+
+> Note: `setup.py` does not install system tools such as LibreOffice or Poppler. Install those separately if the dependency check reports that they are missing.
+
+### Manual setup alternative
+
+If you prefer to run the setup steps manually, use the commands below.
+
+```bash
+mkdir -p .docs .generated
+python -m venv .venv
+source .venv/bin/activate # or .venv/Scripts/Activate for Windows
+python -m pip install -r requirements.txt
+npm install
+npm run check:pptx  # or npm run check:pptx:win for Windows
+```
 
 ## Using with CLI Agents
 
@@ -184,14 +173,14 @@ This repository is intentionally agent-friendly. Any CLI agent can operate on it
 
 1. read repository files,
 2. execute shell commands,
-3. write files into `generated/`, and
+3. write files into `.generated/`, and
 4. follow the instructions in `.agents/skills/pptx/SKILL.md`.
 
 Recommended agent behavior:
 
 - Read `.agents/skills/pptx/SKILL.md` before any PPTX task.
-- Use `docs/` as the default source input directory unless the user specifies another path.
-- Use `generated/` as the default output directory.
+- Use `.docs/` as the default source input directory unless the user specifies another path.
+- Use `.generated/` as the default output directory.
 - Prefer `pptxgenjs` for new decks without a template.
 - Prefer unpack/edit/pack for template-based decks.
 - Always perform content QA and visual QA before reporting completion.
@@ -199,17 +188,17 @@ Recommended agent behavior:
 Example prompt for a CLI agent:
 
 ```text
-Read .agents/skills/pptx/SKILL.md, scan docs/, create a polished PPTX deck from the available source material, and write all generated files to generated/.
+Read .agents/skills/pptx/SKILL.md, scan .docs/, create a polished PPTX deck from the available source material, and write all generated files to .generated/.
 ```
 
 ## Output Policy
 
 Unless explicitly overridden by the user:
 
-- Source documents live in `docs/`
-- Generated scripts live in `generated/`
-- Generated presentations live in `generated/`
-- Extracted text and QA render artifacts live in `generated/`
+- Source documents live in `.docs/`
+- Generated scripts live in `.generated/`
+- Generated presentations live in `.generated/`
+- Extracted text and QA render artifacts live in `.generated/`
 
 This keeps the repository predictable for repeated agent runs.
 
