@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "marmalade",
+  "mood": "Warm, rounded and friendly. Soft orange on cream with generous curves.",
+  "bestFor": "Consumer products, education, community and family-facing decks, anything that should feel approachable rather than corporate.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFFFFF",
+    "alt": "#FFF3E0",
+    "brand": "#F8721F",
+    "dark": "#02000F"
+  },
+  "on": {
+    "base": "#02000F",
+    "alt": "#02000F",
+    "brand": "#02000F",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 20.8,
+    "alt": 18.97,
+    "brand": 7.35,
+    "dark": 20.8
+  },
+  "accent": {
+    "primary": "#F8721F",
+    "secondary": "#F4E11B",
+    "onLight": "#C35613",
+    "onDark": "#F8721F"
+  },
+  "series": [
+    "#F8721F",
+    "#F4E11B",
+    "#28A745",
+    "#DC3545",
+    "#FFB539",
+    "#6C6D71"
+  ],
+  "muted": "#6C6D71",
+  "hairline": "#E4E4E5",
+  "font": {
+    "display": {
+      "family": "Fredoka",
+      "stack": "\"Fredoka\", \"Trebuchet MS\", sans-serif",
+      "weight": 700,
+      "tracking": "0em",
+      "leading": 1.15
+    },
+    "body": {
+      "family": "Onest",
+      "stack": "\"Onest\", \"Segoe UI\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.6
+    },
+    "kicker": {
+      "family": "Onest",
+      "stack": "\"Onest\", \"Segoe UI\", sans-serif",
+      "weight": 600,
+      "tracking": "0.08em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Onest:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 96,
+    "slideTitle": 56,
+    "sectionTitle": 38,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 16
+  },
+  "radius": {
+    "card": 16,
+    "chip": 999,
+    "image": 20
+  },
+  "shadow": {
+    "card": "0 13px 35px rgba(56,62,75,0.08)",
+    "raised": "0 20px 60px rgba(204,204,204,0.30)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#E4E4E5",
+    "axis": "#6C6D71",
+    "label": "#02000F",
+    "series": [
+      "#F8721F",
+      "#F4E11B",
+      "#28A745",
+      "#DC3545",
+      "#FFB539",
+      "#6C6D71"
+    ]
+  },
+  "signature": "Full-pill CTA chips and 16px rounded cards; headings never uppercase.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Fredoka",
+    "bodyFont": "Onest",
+    "sizesPt": {
+      "display": 72.0,
+      "slideTitle": 42.0,
+      "sectionTitle": 28.5,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 12.0
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

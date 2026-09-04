@@ -83,16 +83,29 @@ Use when no template or reference presentation is available.
 
 **Don't create boring slides.** Plain bullets on a white background won't impress anyone. Consider ideas from this list for each slide.
 
+### Theme Selection (Required for New Decks)
+
+Seventeen production themes are available in [`design-themes/`](design-themes/catalog.md). Use them for both PPTX and native HTML creation when the user has not supplied a template or binding brand system.
+
+1. Read [`design-themes/catalog.md`](design-themes/catalog.md) and choose exactly one theme before designing slides.
+2. If the user names a theme ID, use that theme. User choice overrides automatic selection.
+3. Otherwise infer the best theme from the presentation's audience, subject, content density, and delivery setting using the catalog's selection rules. Do not default to a personal favorite.
+4. Load only `design-themes/themes/<id>/theme.json` for PPTX creation. For HTML creation, also load that theme's `theme.css` and embed or adapt its styles into the self-contained output. Never load or combine multiple themes in one deck.
+5. Treat the theme as the visual system: use its surfaces, `on` colors, typography, spacing, radii, chart series, and PPTX mappings. Apply its `signature` device primarily to the title slide and section dividers rather than every slide.
+6. Preserve the theme throughout QA. Do not introduce off-theme colors, arbitrary fonts, or incompatible corner and shadow styles.
+
+Example: “Create an engineering architecture review” should select `blueprint`; “use vellum for this strategy deck” must select `vellum` directly. The visual gallery is available at [`design-themes/preview.html`](design-themes/preview.html).
+
 ### Before Starting
 
-- **Pick a bold, content-informed color palette**: The palette should feel designed for THIS topic. If swapping your colors into a completely different presentation would still "work," you haven't made specific enough choices.
+- **Use the selected theme's content-informed palette**: If a supplied brand system requires a custom palette, make it specific to this topic rather than substituting generic colors.
 - **Dominance over equality**: One color should dominate (60-70% visual weight), with 1-2 supporting tones and one sharp accent. Never give all colors equal weight.
 - **Dark/light contrast**: Dark backgrounds for title + conclusion slides, light for content ("sandwich" structure). Or commit to dark throughout for a premium feel.
 - **Commit to a visual motif**: Pick ONE distinctive element and repeat it — rounded image frames, icons in colored circles, thick single-side borders. Carry it across every slide.
 
 ### Color Palettes
 
-Choose colors that match your topic — don't default to generic blue. Use these palettes as inspiration:
+When no packaged theme applies because a supplied template or brand system controls the design, choose colors that match the topic rather than defaulting to generic blue. Do not mix these inspiration palettes into a selected packaged theme.
 
 | Theme | Primary | Secondary | Accent |
 |-------|---------|-----------|--------|

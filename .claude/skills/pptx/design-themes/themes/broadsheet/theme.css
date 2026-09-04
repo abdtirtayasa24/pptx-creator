@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..700&display=swap");
+
+/* broadsheet — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+:root {
+  --surface:        #FAF7F2;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #B3402E;
+  --surface-dark:   #1A1614;
+
+  --on-surface:       #1A1614;
+  --on-surface-alt:   #1A1614;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #B3402E;
+  --accent-2:        #3E6B5A;
+  --accent-on-light: #AC4535;
+  --accent-on-dark:  #D15D4B;
+  --muted:     #6B625A;
+  --hairline:  #DED7CC;
+
+  --s1: #B3402E;  --s2: #3E6B5A;  --s3: #C9A227;
+  --s4: #7A6A58;  --s5: #8C6A9E;  --s6: #1A1614;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "Inter", sans-serif;
+  --font-kicker:  "Inter", sans-serif;
+
+  --fs-display: 104px;
+  --fs-title:   60px;
+  --fs-section: 38px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  15px;
+
+  --r-card:  4px;
+  --r-chip:  2px;
+  --r-image: 2px;
+
+  --shadow-card:   none;
+  --shadow-raised: 0 2px 12px rgba(26,22,20,0.08);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.slide--dark .kicker, .slide--brand .kicker { color: var(--accent-on-dark); }
+.slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }

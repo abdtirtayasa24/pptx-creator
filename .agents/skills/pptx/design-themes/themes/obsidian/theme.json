@@ -1,0 +1,136 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "obsidian",
+  "mood": "Dark-first minimalism. Near-black canvas, one warm tangerine accent, tight neutral type.",
+  "bestFor": "Technical talks, investor decks, product architecture, anything presented in a dark room or on a large screen.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#13111A",
+    "alt": "#000000",
+    "brand": "#FFB646",
+    "dark": "#13111A"
+  },
+  "on": {
+    "base": "#FFFFFF",
+    "alt": "#FFFFFF",
+    "brand": "#13111A",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 18.7,
+    "alt": 21.0,
+    "brand": 10.72,
+    "dark": 18.7
+  },
+  "accent": {
+    "primary": "#FFB646",
+    "secondary": "#F2F2F2",
+    "onLight": "#8A5A00",
+    "onDark": "#FFB646"
+  },
+  "series": [
+    "#FFB646",
+    "#4ECDC4",
+    "#A78BFA",
+    "#FF7A5C",
+    "#F2F2F2",
+    "#8C86A8"
+  ],
+  "muted": "rgba(255,255,255,0.72)",
+  "hairline": "rgba(255,255,255,0.14)",
+  "font": {
+    "display": {
+      "family": "Inter",
+      "stack": "\"Inter\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.02em",
+      "leading": 1.1
+    },
+    "body": {
+      "family": "General Sans",
+      "stack": "\"General Sans\", \"Inter\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.6
+    },
+    "kicker": {
+      "family": "Inter",
+      "stack": "\"Inter\", sans-serif",
+      "weight": 600,
+      "tracking": "0.14em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap",
+    "https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap"
+  ],
+  "scale": {
+    "display": 104,
+    "slideTitle": 60,
+    "sectionTitle": 40,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 10,
+    "chip": 50,
+    "image": 10
+  },
+  "shadow": {
+    "card": "0 8px 40px rgba(0,0,0,0.45)",
+    "raised": "0 20px 60px rgba(0,0,0,0.55)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "rgba(255,255,255,0.14)",
+    "axis": "rgba(255,255,255,0.72)",
+    "label": "#FFFFFF",
+    "series": [
+      "#FFB646",
+      "#4ECDC4",
+      "#A78BFA",
+      "#FF7A5C",
+      "#F2F2F2",
+      "#8C86A8"
+    ]
+  },
+  "signature": "Dark canvas throughout; tangerine reserved for a single emphasis per slide. Cards lift 16px on reveal.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Inter",
+    "bodyFont": "General Sans",
+    "sizesPt": {
+      "display": 78.0,
+      "slideTitle": 45.0,
+      "sectionTitle": 30.0,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 11.2
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  },
+  "darkFirst": true,
+  "lightSurface": "#FFFFFF",
+  "fontNote": "Source theme self-hosts both faces. Inter comes from Google Fonts; General Sans from Fontshare. The source theme's @font-face weights were mis-declared \u2014 this set uses correct numeric weights."
+}

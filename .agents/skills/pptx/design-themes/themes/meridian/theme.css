@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Source+Sans+3:wght@400..700&display=swap");
+
+/* meridian — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+:root {
+  --surface:        #FFFFFF;
+  --surface-alt:    #F4F6F8;
+  --surface-brand:  #16243D;
+  --surface-dark:   #0E1829;
+
+  --on-surface:       #16243D;
+  --on-surface-alt:   #16243D;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #C77B30;
+  --accent-2:        #3E6E8E;
+  --accent-on-light: #A3692F;
+  --accent-on-dark:  #C77B30;
+  --muted:     #5A6472;
+  --hairline:  #DDE3E9;
+
+  --s1: #16243D;  --s2: #C77B30;  --s3: #3E6E8E;
+  --s4: #6B8F71;  --s5: #A3495A;  --s6: #7A8494;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body:    "Source Sans 3", sans-serif;
+  --font-kicker:  "Manrope", sans-serif;
+
+  --fs-display: 88px;
+  --fs-title:   52px;
+  --fs-section: 34px;
+  --fs-lead:    26px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 15px;
+  --fs-kicker:  14px;
+
+  --r-card:  6px;
+  --r-chip:  4px;
+  --r-image: 6px;
+
+  --shadow-card:   0 1px 3px rgba(22,36,61,0.10);
+  --shadow-raised: 0 8px 28px rgba(22,36,61,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.slide--dark .kicker, .slide--brand .kicker { color: var(--accent-on-dark); }
+.slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }

@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "broadsheet",
+  "mood": "Editorial print. Serif display, wide margins, hairline rules, one clay red.",
+  "bestFor": "Long-form narrative, research findings, annual reviews, keynote talks where a pull quote should land like a magazine spread.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FAF7F2",
+    "alt": "#FFFFFF",
+    "brand": "#B3402E",
+    "dark": "#1A1614"
+  },
+  "on": {
+    "base": "#1A1614",
+    "alt": "#1A1614",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 16.81,
+    "alt": 17.97,
+    "brand": 5.69,
+    "dark": 17.97
+  },
+  "accent": {
+    "primary": "#B3402E",
+    "secondary": "#3E6B5A",
+    "onLight": "#AC4535",
+    "onDark": "#D15D4B"
+  },
+  "series": [
+    "#B3402E",
+    "#3E6B5A",
+    "#C9A227",
+    "#7A6A58",
+    "#8C6A9E",
+    "#1A1614"
+  ],
+  "muted": "#6B625A",
+  "hairline": "#DED7CC",
+  "font": {
+    "display": {
+      "family": "Fraunces",
+      "stack": "\"Fraunces\", Georgia, serif",
+      "weight": 700,
+      "tracking": "-0.01em",
+      "leading": 1.08
+    },
+    "body": {
+      "family": "Inter",
+      "stack": "\"Inter\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.62
+    },
+    "kicker": {
+      "family": "Inter",
+      "stack": "\"Inter\", sans-serif",
+      "weight": 600,
+      "tracking": "0.12em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 104,
+    "slideTitle": 60,
+    "sectionTitle": 38,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 4,
+    "chip": 2,
+    "image": 2
+  },
+  "shadow": {
+    "card": "none",
+    "raised": "0 2px 12px rgba(26,22,20,0.08)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DED7CC",
+    "axis": "#6B625A",
+    "label": "#1A1614",
+    "series": [
+      "#B3402E",
+      "#3E6B5A",
+      "#C9A227",
+      "#7A6A58",
+      "#8C6A9E",
+      "#1A1614"
+    ]
+  },
+  "signature": "A hairline rule above every title, and pull quotes set large in the display serif. Corners stay square; the paper ground does the warmth.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Fraunces",
+    "bodyFont": "Inter",
+    "sizesPt": {
+      "display": 78.0,
+      "slideTitle": 45.0,
+      "sectionTitle": 28.5,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 11.2
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

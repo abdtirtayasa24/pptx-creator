@@ -1,0 +1,133 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "aurora",
+  "mood": "Soft off-white ground, coral-to-indigo gradient headlines, generous 18px-native reading size.",
+  "bestFor": "Personal portfolios, creative pitches, design reviews, founder decks. Polished without being austere.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#F9FBFF",
+    "alt": "#FFFFFF",
+    "brand": "#342EAD",
+    "dark": "#12103E"
+  },
+  "on": {
+    "base": "#12103E",
+    "alt": "#12103E",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 17.33,
+    "alt": 17.96,
+    "brand": 9.81,
+    "dark": 17.96
+  },
+  "accent": {
+    "primary": "#FF6D5A",
+    "secondary": "#342EAD",
+    "onLight": "#CC3A2A",
+    "onDark": "#FF6D5A"
+  },
+  "series": [
+    "#FF6D5A",
+    "#342EAD",
+    "#34BC85",
+    "#FF3767",
+    "#F8D84A",
+    "#000041"
+  ],
+  "muted": "#767682",
+  "hairline": "#ECEBF9",
+  "font": {
+    "display": {
+      "family": "Lexend Deca",
+      "stack": "\"Lexend Deca\", sans-serif",
+      "weight": 600,
+      "tracking": "-0.01em",
+      "leading": 1.15
+    },
+    "body": {
+      "family": "Jost",
+      "stack": "\"Jost\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.66
+    },
+    "kicker": {
+      "family": "Jost",
+      "stack": "\"Jost\", sans-serif",
+      "weight": 500,
+      "tracking": "0.10em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Jost:wght@400..600&family=Lexend+Deca:wght@400..800&display=swap"
+  ],
+  "scale": {
+    "display": 100,
+    "slideTitle": 58,
+    "sectionTitle": 38,
+    "lead": 30,
+    "body": 25,
+    "bodySm": 21,
+    "caption": 17,
+    "kicker": 17
+  },
+  "radius": {
+    "card": 10,
+    "chip": 999,
+    "image": 20
+  },
+  "shadow": {
+    "card": "5px 10px 60px rgba(52,46,173,0.15)",
+    "raised": "0 1px 2px rgba(52,46,173,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#ECEBF9",
+    "axis": "#767682",
+    "label": "#12103E",
+    "series": [
+      "#FF6D5A",
+      "#342EAD",
+      "#34BC85",
+      "#FF3767",
+      "#F8D84A",
+      "#000041"
+    ]
+  },
+  "signature": "Gradient-clipped text on the title slide and section dividers, running indigo to coral at 147deg.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Lexend Deca",
+    "bodyFont": "Jost",
+    "sizesPt": {
+      "display": 75.0,
+      "slideTitle": 43.5,
+      "sectionTitle": 28.5,
+      "lead": 22.5,
+      "body": 18.8,
+      "bodySm": 15.8,
+      "caption": 12.8,
+      "kicker": 12.8
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  },
+  "gradient": "linear-gradient(147deg, #342EAD 0%, #FF6D5A 100%)"
+}

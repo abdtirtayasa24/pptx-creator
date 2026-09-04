@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "linen",
+  "mood": "Calm and airy. Warm off-white, sage and blush pastels, generous whitespace, no shadows.",
+  "bestFor": "Healthcare, mindfulness, HR and people decks, retrospectives, workshops. Anything that should lower the room's temperature.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#F7F5F2",
+    "alt": "#E8EEF0",
+    "brand": "#557E69",
+    "dark": "#33403B"
+  },
+  "on": {
+    "base": "#33403B",
+    "alt": "#33403B",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 9.96,
+    "alt": 9.25,
+    "brand": 4.59,
+    "dark": 10.84
+  },
+  "accent": {
+    "primary": "#7FA692",
+    "secondary": "#D9A18A",
+    "onLight": "#577867",
+    "onDark": "#8CAF9D"
+  },
+  "series": [
+    "#7FA692",
+    "#D9A18A",
+    "#9A93B8",
+    "#E0C879",
+    "#6E93A6",
+    "#B8A99A"
+  ],
+  "muted": "#6C7A74",
+  "hairline": "#E0DCD5",
+  "font": {
+    "display": {
+      "family": "Outfit",
+      "stack": "\"Outfit\", sans-serif",
+      "weight": 500,
+      "tracking": "-0.01em",
+      "leading": 1.16
+    },
+    "body": {
+      "family": "DM Sans",
+      "stack": "\"DM Sans\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.7
+    },
+    "kicker": {
+      "family": "DM Sans",
+      "stack": "\"DM Sans\", sans-serif",
+      "weight": 500,
+      "tracking": "0.14em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&family=Outfit:wght@300..700&display=swap"
+  ],
+  "scale": {
+    "display": 92,
+    "slideTitle": 52,
+    "sectionTitle": 34,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 24,
+    "chip": 999,
+    "image": 24
+  },
+  "shadow": {
+    "card": "none",
+    "raised": "0 4px 24px rgba(51,64,59,0.06)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#E0DCD5",
+    "axis": "#6C7A74",
+    "label": "#33403B",
+    "series": [
+      "#7FA692",
+      "#D9A18A",
+      "#9A93B8",
+      "#E0C879",
+      "#6E93A6",
+      "#B8A99A"
+    ]
+  },
+  "signature": "Display type sits at weight 500, never bold. Whitespace and tonal shifts carry hierarchy instead of weight or shadow.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Outfit",
+    "bodyFont": "DM Sans",
+    "sizesPt": {
+      "display": 69.0,
+      "slideTitle": 39.0,
+      "sectionTitle": 25.5,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 11.2
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

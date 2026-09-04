@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400..700&family=Manrope:wght@500..800&display=swap");
+
+/* lagoon — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+:root {
+  --surface:        #F2FBFA;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #006B67;
+  --surface-dark:   #0B2F36;
+
+  --on-surface:       #103B42;
+  --on-surface-alt:   #103B42;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #00A6A0;
+  --accent-2:        #2269A7;
+  --accent-on-light: #006963;
+  --accent-on-dark:  #63E5DC;
+  --muted:           #64777A;
+  --hairline:        #D8ECEA;
+
+  --s1: #008D88;
+  --s2: #2269A7;
+  --s3: #63A66F;
+  --s4: #8A68A8;
+  --s5: #D28A3A;
+  --s6: #103B42;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body:    "IBM Plex Sans", sans-serif;
+  --font-kicker:  "IBM Plex Sans", sans-serif;
+
+  --fs-display: 92px;
+  --fs-title:   54px;
+  --fs-section: 36px;
+  --fs-lead:    28px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  18px;
+  --r-chip:  999px;
+  --r-image: 18px;
+
+  --shadow-card:   0 12px 40px rgba(0,107,103,0.10);
+  --shadow-raised: 0 3px 12px rgba(0,107,103,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+.slide--dark .kicker,
+.slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display,
+.title,
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.display {
+  font-size: var(--fs-display);
+}
+
+.title {
+  font-size: var(--fs-title);
+}
+
+.section-title {
+  font-size: var(--fs-section);
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.measure {
+  max-width: 62ch;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+img,
+figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+
+.rule {
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+

@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "blueprint",
+  "mood": "Precise and systematic. Pale blueprint grid, cobalt structure, mono labels, sharp geometry.",
+  "bestFor": "Engineering reviews, product architecture, technical roadmaps, developer tooling, systems and operations decks.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#F6F8FF",
+    "alt": "#FFFFFF",
+    "brand": "#1D4ED8",
+    "dark": "#10203F"
+  },
+  "on": {
+    "base": "#10203F",
+    "alt": "#10203F",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 14.23,
+    "alt": 15.21,
+    "brand": 6.7,
+    "dark": 15.21
+  },
+  "accent": {
+    "primary": "#2F6BFF",
+    "secondary": "#00A7C7",
+    "onLight": "#1847B8",
+    "onDark": "#78CFFF"
+  },
+  "series": [
+    "#2F6BFF",
+    "#00A7C7",
+    "#6F54D9",
+    "#2E8B57",
+    "#D07A1D",
+    "#10203F"
+  ],
+  "muted": "#667089",
+  "hairline": "#DCE3F5",
+  "font": {
+    "display": {
+      "family": "Space Grotesk",
+      "stack": "\"Space Grotesk\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.03em",
+      "leading": 1.08
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "stack": "\"IBM Plex Sans\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.58
+    },
+    "kicker": {
+      "family": "IBM Plex Mono",
+      "stack": "\"IBM Plex Mono\", monospace",
+      "weight": 600,
+      "tracking": "0.08em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500..700&family=IBM+Plex+Sans:wght@400..700&family=Space+Grotesk:wght@500..700&display=swap"
+  ],
+  "scale": {
+    "display": 94,
+    "slideTitle": 54,
+    "sectionTitle": 36,
+    "lead": 27,
+    "body": 22,
+    "bodySm": 18,
+    "caption": 15,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 2,
+    "chip": 4,
+    "image": 4
+  },
+  "shadow": {
+    "card": "0 8px 28px rgba(29,78,216,0.09)",
+    "raised": "0 2px 8px rgba(29,78,216,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DCE3F5",
+    "axis": "#667089",
+    "label": "#10203F",
+    "series": [
+      "#2F6BFF",
+      "#00A7C7",
+      "#6F54D9",
+      "#2E8B57",
+      "#D07A1D",
+      "#10203F"
+    ]
+  },
+  "signature": "A subtle 32px blueprint grid sits behind light slides; mono kickers and captions read like system annotations.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Space Grotesk",
+    "bodyFont": "IBM Plex Sans",
+    "sizesPt": {
+      "display": 70.5,
+      "slideTitle": 40.5,
+      "sectionTitle": 27,
+      "lead": 20.3,
+      "body": 16.5,
+      "bodySm": 13.5,
+      "caption": 11.3,
+      "kicker": 11.3
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

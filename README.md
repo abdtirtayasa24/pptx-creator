@@ -1,27 +1,150 @@
 # PPTX Creator Runtime
 
-A repository-scoped runtime and skill pack for creating, editing, extracting, and QA-checking PowerPoint presentations from command-line coding agents.
+A repository-scoped agent runtime for creating, editing, extracting, and QA-checking PowerPoint decks and native interactive HTML presentations.
 
-This project is designed to be usable inside any CLI-based agent environment, including **Claude Code**, **OpenAI Codex CLI**, **Pi Coding Agent**, and similar terminal agents that can read files, execute shell commands, and write generated artifacts.
+It is designed for terminal-based coding agents—including **Pi Coding Agent**, **Claude Code**, **OpenAI Codex CLI**, and similar tools—that can read files, run commands, and write generated artifacts.
 
-## Capabilities
+## Features
 
-The repository provides a PPTX-focused agent skill under:
+- Create `.pptx` decks from scratch with PptxGenJS.
+- Edit existing decks through Office Open XML unpack/edit/clean/pack workflows.
+- Extract content from PowerPoint, Word, Excel, PDF, Markdown, CSV, JSON, and HTML sources.
+- Generate **native interactive HTML slide presentations** with selectable text, semantic tables, and SVG/canvas/DOM charts.
+- Add presentation navigation, fullscreen and overview modes, keyboard/touch controls, filters, search, focus states, and chart tooltips.
+- Choose from **17 packaged design themes** automatically by presentation type or explicitly by theme ID.
+- Render and inspect slides through repeatable content and visual QA workflows.
+- Use `.docs/` for default source material and `.generated/` for outputs and intermediate artifacts.
 
-```text
-.agents/skills/pptx/
+## Quick Start
+
+```bash
+git clone https://github.com/abdtirtayasa24/pptx-creator.git
+cd pptx-creator
+python setup.py
 ```
 
-The skill supports:
+`setup.py` creates `.docs/`, `.generated/`, and `.venv/`; installs the declared Python and Node dependencies; and runs the platform-specific dependency check.
 
-- Creating `.pptx` files from scratch using `pptxgenjs`
-- Editing existing `.pptx` files through Office Open XML unpack/edit/pack workflows
-- Reading and extracting content from `.pptx` using MarkItDown
-- Converting rendered slides to images for visual QA
-- Using `.docs/` as the default source-document directory
-- Using `.generated/` as the default output directory
+System tools such as LibreOffice and Poppler are not installed automatically. See [Dependencies](#dependencies).
 
-With the declared Python dependencies, the content-ingestion layer can handle:
+## Creating Presentations
+
+Place source documents in `.docs/` unless another location is specified. Generated decks, HTML presentations, scripts, extracted content, and QA artifacts are written to `.generated/` by default.
+
+### Pi Coding Agent
+
+This repository includes `.pi/prompts/pptx.md`, which provides the project command alias:
+
+```text
+/pptx html <prompt>
+/pptx pptx <prompt>
+```
+
+Examples:
+
+```text
+/pptx html Create an interactive quarterly performance presentation from the Excel workbook in .docs/. Use lagoon and add month and channel filters.
+```
+
+```text
+/pptx pptx Create a board-ready annual report from the documents in .docs/. Use meridian.
+```
+
+Pi's native skill invocation also works:
+
+```text
+/skill:pptx html <prompt>
+/skill:pptx <prompt>
+```
+
+If `.pi/prompts/` was added after Pi started, restart or reload Pi before using `/pptx`.
+
+### Claude Code
+
+Claude Code discovers the skill through `.claude/skills/pptx`, which should be a symbolic link or Windows directory junction to the canonical `.agents/skills/pptx` directory. It can then be invoked directly:
+
+```text
+/pptx html <prompt>
+/pptx <prompt>
+```
+
+If the link is not present after cloning, create it from the repository root on a system that supports symbolic links:
+
+```bash
+mkdir -p .claude/skills
+ln -s ../../.agents/skills/pptx .claude/skills/pptx
+```
+
+On Windows, enable Developer Mode or use an elevated terminal for a true symbolic link. A directory junction is also suitable for local Claude Code discovery.
+
+### Other CLI Agents
+
+Agents without skill discovery can be instructed explicitly:
+
+```text
+Read .agents/skills/pptx/SKILL.md, scan .docs/, create the requested presentation, and write all generated files to .generated/.
+```
+
+## Output Modes
+
+| Mode | Trigger | Default output | Primary implementation |
+|---|---|---|---|
+| PPTX | `/pptx pptx <prompt>`, `/skill:pptx <prompt>`, or a normal deck request | `.generated/<name>.pptx` | PptxGenJS or Office Open XML editing |
+| Interactive HTML | `/pptx html <prompt>`, `/skill:pptx html <prompt>`, or an explicit interactive HTML request | `.generated/<name>.html` | Native HTML, CSS, JavaScript, and SVG/canvas/DOM |
+
+HTML mode does not create a `.pptx` or `.pdf` unless the user explicitly asks for those formats too.
+
+### Native HTML Contract
+
+The complete implementation requirements are in the [native HTML workflow](.agents/skills/pptx/html.md). Interactive HTML presentations must:
+
+- represent every source/requested slide as an ordered 16:9 HTML slide;
+- keep text selectable and searchable;
+- use real `<table>` elements for tables;
+- use SVG, canvas, or DOM marks for charts;
+- never use rendered PowerPoint pages as full-slide images;
+- preserve access to dense data through readable focused views, filters, tabs, drill-down, or scrolling;
+- support keyboard navigation, touch navigation, fullscreen, overview, and visible focus states;
+- remain responsive and preferably self-contained; and
+- complete at least one browser-based visual fix-and-verify cycle.
+
+Validate a generated HTML presentation with:
+
+```bash
+source .venv/Scripts/activate  # Windows Git Bash
+python .agents/skills/pptx/scripts/validate_html_presentation.py .generated/deck.html --min-slides 1
+```
+
+On Linux or macOS, activate the environment with `source .venv/bin/activate`.
+
+## Design Themes
+
+The runtime contains 17 interchangeable themes under `.agents/skills/pptx/design-themes/themes/`:
+
+```text
+aurora      blueprint    blush       broadsheet   clay
+crayon      foundry      grove       lagoon       linen
+marmalade   meridian     obsidian    spectrum     terminal
+vellum      workbench
+```
+
+Theme behavior:
+
+1. A theme named by the user is used directly.
+2. Otherwise, the agent selects one from the audience, subject, content density, and delivery setting.
+3. Exactly one theme is loaded per deck.
+4. PPTX generation uses `theme.json`; HTML generation also embeds or adapts `theme.css`.
+5. Theme colors, typography, spacing, radii, chart series, and signature motif remain consistent throughout the deck.
+
+See:
+
+- [Theme catalog and selection rules](.agents/skills/pptx/design-themes/catalog.md)
+- [Visual theme gallery](.agents/skills/pptx/design-themes/preview.html)
+- [Theme schema](.agents/skills/pptx/design-themes/SCHEMA.md)
+
+## Supported Sources
+
+The declared document-ingestion layer supports:
 
 | Source type | Extensions |
 |---|---|
@@ -29,36 +152,38 @@ With the declared Python dependencies, the content-ingestion layer can handle:
 | Word | `.docx` |
 | Excel | `.xlsx`, `.xls` |
 | PDF | `.pdf` |
-| Markdown/text | `.md`, `.markdown`, `.txt`, `.text` |
+| Markdown and text | `.md`, `.markdown`, `.txt`, `.text` |
 | Structured text | `.json`, `.jsonl`, `.csv` |
 | HTML | `.html`, `.htm` |
-| Images as slide assets | `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg` |
+| Presentation assets | `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp` |
 
-> Note: Image files can be embedded as slide assets. Extracting semantic text from images requires a vision/OCR-capable tool outside the base dependency set.
+Images can be embedded as presentation assets. Semantic extraction from images requires a vision/OCR-capable agent or tool outside the base dependency set.
 
 ## Repository Layout
 
 ```text
 .
-├── .agents/
-│   └── skills/
-│       └── pptx/
-│           ├── SKILL.md
-│           ├── editing.md
-│           ├── pptxgenjs.md
-│           └── scripts/
-├── .docs/
-│   └── *.md / *.pdf / *.docx / *.xlsx / ...
-├── .generated/
-│   └── generated decks, scripts, extracted text, QA renders
-├── demo/
-│   ├── docs/
-│   │   └── global-tiktok-instagram-addiction-(2015-2060)/
-│   └── generated/
-│       └── demo PPTX deck and QA/render artifacts
-├── scripts/
-│   ├── check-pptx-deps.sh
-│   └── check-pptx-deps.ps1
+├── .agents/skills/pptx/
+│   ├── SKILL.md                         # Canonical agent instructions
+│   ├── editing.md                       # Template/editing workflow
+│   ├── pptxgenjs.md                     # PPTX-from-scratch workflow
+│   ├── html.md                          # Native interactive HTML workflow
+│   ├── design-themes/
+│   │   ├── catalog.md                   # Theme selection guide
+│   │   ├── preview.html                 # Gallery of all themes
+│   │   ├── SCHEMA.md                    # Theme token contract
+│   │   └── themes/<id>/
+│   │       ├── theme.json
+│   │       └── theme.css
+│   └── scripts/
+│       ├── validate_html_presentation.py
+│       └── office/...
+├── .claude/skills/pptx                  # Claude Code link to canonical skill
+├── .pi/prompts/pptx.md                  # Pi `/pptx` command alias
+├── .docs/                               # Default source documents
+├── .generated/                          # Generated outputs and QA artifacts
+├── demo/                                # Example source data and PPTX output
+├── scripts/                             # Dependency checks
 ├── package.json
 ├── requirements.txt
 ├── setup.py
@@ -67,164 +192,99 @@ With the declared Python dependencies, the content-ingestion layer can handle:
 
 ## Runtime Architecture
 
-The project combines three layers:
+### Agent workflow layer
 
-### 1. Agent Skill Layer
+`.agents/skills/pptx/SKILL.md` selects PPTX or HTML mode, establishes input/output conventions, chooses a design theme, and requires content and visual QA.
 
-`.agents/skills/pptx/SKILL.md` defines agent-facing operating rules:
+### Document and Office tooling
 
-- when to trigger the PPTX workflow
-- where to scan default source documents
-- where to write generated outputs
-- how to create decks from scratch
-- how to edit templates safely
-- how to perform content and visual QA
+MarkItDown normalizes supported source documents for agent reasoning. The Office helpers unpack, clean, validate, render, and repack PowerPoint packages.
 
-### 2. Python Document/Office Tooling
+Important utilities include:
 
-Python dependencies are declared in `requirements.txt`:
+- `scripts/office/unpack.py` — extract and pretty-print package XML;
+- `scripts/office/pack.py` — repack Office XML into `.pptx`;
+- `scripts/office/validate.py` — validate package structure;
+- `scripts/office/soffice.py` — wrap LibreOffice conversion;
+- `scripts/thumbnail.py` — build thumbnail grids;
+- `scripts/add_slide.py` — duplicate or create slides from layouts; and
+- `scripts/clean.py` — remove orphaned slides, media, and relationships.
 
-```text
-markitdown[pptx,docx,xlsx,xls,pdf]
-Pillow
-```
+### PPTX generation layer
 
-MarkItDown is used to normalize source documents into Markdown-like text for agent reasoning and deck planning.
+PptxGenJS creates new PowerPoint decks programmatically when no template is supplied.
 
-The skill also includes helper scripts for Office Open XML manipulation:
+### Native HTML layer
 
-- `unpack.py` — extract and pretty-print `.pptx` package XML
-- `pack.py` — repack edited Office XML into `.pptx`
-- `validate.py` — validate package structure
-- `soffice.py` — wrap LibreOffice conversion calls
-- `thumbnail.py` — create thumbnail grids for deck inspection
-- `add_slide.py` — duplicate or create slides from layouts
-- `clean.py` — remove orphaned slides/media/rels
+HTML mode creates browser-native slides and validates their structure with `validate_html_presentation.py`. Charts and interactions remain editable and inspectable rather than being flattened into slide screenshots.
 
-### 3. Node PPTX Generation Layer
+## Dependencies
 
-Node dependencies are declared in `package.json`:
+### Declared packages
 
-```json
-{
-  "dependencies": {
-    "pptxgenjs": "^4.0.0"
-  }
-}
-```
+| Dependency | Purpose |
+|---|---|
+| Python 3.10+ | Runtime for extraction, validation, and Office helpers |
+| `markitdown[pptx,docx,xlsx,xls,pdf]` | Source-document extraction |
+| Pillow | Thumbnail and image processing |
+| Node.js and `pptxgenjs` | Programmatic PPTX generation |
 
-`pptxgenjs` is used when creating `.pptx` files programmatically from scratch.
-
-## System Dependencies
-
-For full rendering and visual QA, install these system-level tools:
+### System tools for PPTX rendering
 
 | Tool | Purpose |
 |---|---|
 | LibreOffice / `soffice` | Convert `.pptx` to `.pdf` |
-| Poppler / `pdftoppm` | Convert `.pdf` pages to slide images |
-| Node.js | Run `pptxgenjs` deck generators |
-| Python 3.10+ | Run MarkItDown and Office helper scripts |
+| Poppler / `pdftoppm` | Convert PDF pages to slide images |
 
-## Clone and Setup
+Pure HTML mode does not require LibreOffice, Poppler, or PptxGenJS unless a PowerPoint source must also be inspected or rendered.
 
-### 1. Clone the repository
+Check the full PPTX toolchain with:
 
 ```bash
-git clone https://github.com/abdtirtayasa24/pptx-creator.git
-cd pptx-creator
+npm run check:pptx       # Linux, macOS, Git Bash, or WSL
+npm run check:pptx:win   # Windows PowerShell
 ```
 
-### 2. Run the setup helper
-
-```bash
-python setup.py
-```
-
-The setup helper will:
-
-- create `.docs/` for source documents if it does not exist
-- create `.generated/` for generated decks, scripts, extracted text, and QA artifacts if it does not exist
-- create `.venv/` if it does not exist
-- install Python dependencies from `requirements.txt`
-- install Node dependencies from `package.json`
-- run the platform-specific PPTX dependency check
-
-The dependency check validates Python packages, `pptxgenjs`, LibreOffice, and Poppler.
-
-> Note: `setup.py` does not install system tools such as LibreOffice or Poppler. Install those separately if the dependency check reports that they are missing.
-
-### Manual setup alternative
-
-If you prefer to run the setup steps manually, use the commands below.
+## Manual Setup
 
 ```bash
 mkdir -p .docs .generated
 python -m venv .venv
-source .venv/bin/activate # or .venv/Scripts/Activate for Windows
+source .venv/bin/activate  # use .venv/Scripts/activate on Windows Git Bash
 python -m pip install -r requirements.txt
 npm install
-npm run check:pptx  # or npm run check:pptx:win for Windows
+npm run check:pptx         # use check:pptx:win in Windows PowerShell
 ```
 
-## Using with CLI Agents
+## QA Policy
 
-This repository is intentionally agent-friendly. Any CLI agent can operate on it if it can:
+Every completed presentation should include:
 
-1. read repository files,
-2. execute shell commands,
-3. write files into `.generated/`, and
-4. follow the instructions in `.agents/skills/pptx/SKILL.md`.
+1. source-to-slide content verification;
+2. overflow, overlap, contrast, alignment, and readability checks;
+3. representative rendering at the intended presentation size;
+4. at least one visual fix-and-verify cycle; and
+5. re-validation after fixes.
 
-Recommended agent behavior:
-
-- Read `.agents/skills/pptx/SKILL.md` before any PPTX task.
-- Use `.docs/` as the default source input directory unless the user specifies another path.
-- Use `.generated/` as the default output directory.
-- Prefer `pptxgenjs` for new decks without a template.
-- Prefer unpack/edit/pack for template-based decks.
-- Always perform content QA and visual QA before reporting completion.
-
-Example prompt for a CLI agent:
-
-```text
-Read .agents/skills/pptx/SKILL.md, scan .docs/, create a polished PPTX deck from the available source material, and write all generated files to .generated/.
-```
-
-## Output Policy
-
-Unless explicitly overridden by the user:
-
-- Source documents live in `.docs/`
-- Generated scripts live in `.generated/`
-- Generated presentations live in `.generated/`
-- Extracted text and QA render artifacts live in `.generated/`
-
-This keeps the repository predictable for repeated agent runs.
+PPTX mode uses MarkItDown plus PDF/image rendering. HTML mode uses the structural validator, JavaScript syntax checks, and desktop/compact browser inspection.
 
 ## Demo
 
-A generated example PowerPoint deck is available in `demo/generated/`.
-The initial agent prompt used to execute this demo is available in `demo/demo_prompt.md`.
-The demo source CSV files are stored in:
+A generated PowerPoint example is available in `demo/generated/`. Its source prompt is in `demo/demo_prompt.md`, and its source CSV files are under:
 
 ```text
 demo/docs/global-tiktok-instagram-addiction-(2015-2060)/
 ```
 
-Those CSV files are from the Kaggle dataset **TikTok and Instagram Addiction Dataset (2015–2060)**:
-
-```text
-https://www.kaggle.com/datasets/abdulmaliklodhra/tiktok-and-instagram-addiction-dataset-20152060
-```
+The dataset is available from [Kaggle](https://www.kaggle.com/datasets/abdulmaliklodhra/tiktok-and-instagram-addiction-dataset-20152060).
 
 ## Notes and Limitations
 
-- `.docx` is supported; legacy `.doc` is not part of the declared base workflow.
-- `.xlsx` and `.xls` are supported through MarkItDown extras.
-- `.pdf` extraction quality depends on the PDF structure and parser behavior.
-- Image embedding is supported; OCR/vision extraction is not guaranteed without additional tooling.
-- Do not install dependencies automatically during normal agent execution unless the user explicitly asks for environment setup.
+- Legacy `.doc` files are not part of the declared base workflow.
+- PDF extraction quality depends on the PDF structure and parser behavior.
+- Font availability affects PPTX rendering; presentation generators should use each theme's documented fallback stack when necessary.
+- Packaged HTML themes use web-font URLs, so offline viewing may fall back to local fonts unless fonts are embedded.
+- Do not install dependencies during normal agent execution unless the user explicitly requests environment setup.
 
 ## License
 

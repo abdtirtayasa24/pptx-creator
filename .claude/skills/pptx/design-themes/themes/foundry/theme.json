@@ -1,0 +1,133 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "foundry",
+  "mood": "Condensed uppercase headlines, near-black surfaces, one electric green. Industrial and loud.",
+  "bestFor": "Sports, fitness, construction, manufacturing, event and hype decks. Anything that should read as confident and physical.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFFFFF",
+    "alt": "#F1F1F1",
+    "brand": "#08D665",
+    "dark": "#131617"
+  },
+  "on": {
+    "base": "#0B0D0E",
+    "alt": "#0B0D0E",
+    "brand": "#0B0D0E",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 19.48,
+    "alt": 17.24,
+    "brand": 10.03,
+    "dark": 18.18
+  },
+  "accent": {
+    "primary": "#08D665",
+    "secondary": "#06A950",
+    "onLight": "#0E8744",
+    "onDark": "#08D665"
+  },
+  "series": [
+    "#08D665",
+    "#06A950",
+    "#22CD6F",
+    "#98ADC2",
+    "#32383A",
+    "#0B0D0E"
+  ],
+  "muted": "#98ADC2",
+  "hairline": "#DFDFDE",
+  "font": {
+    "display": {
+      "family": "Oswald",
+      "stack": "\"Oswald\", \"Arial Narrow\", sans-serif",
+      "weight": 600,
+      "tracking": "-0.01em",
+      "leading": 1.05,
+      "transform": "uppercase"
+    },
+    "body": {
+      "family": "Rubik",
+      "stack": "\"Rubik\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.65
+    },
+    "kicker": {
+      "family": "Rubik",
+      "stack": "\"Rubik\", sans-serif",
+      "weight": 500,
+      "tracking": "0.16em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=Rubik:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 124,
+    "slideTitle": 68,
+    "sectionTitle": 44,
+    "lead": 26,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 16,
+    "kicker": 16
+  },
+  "radius": {
+    "card": 5,
+    "chip": 4,
+    "image": 5
+  },
+  "shadow": {
+    "card": "0 0 3px rgba(0,0,0,0.14)",
+    "raised": "0 25px 60px rgba(21,21,21,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DFDFDE",
+    "axis": "#98ADC2",
+    "label": "#0B0D0E",
+    "series": [
+      "#08D665",
+      "#06A950",
+      "#22CD6F",
+      "#98ADC2",
+      "#32383A",
+      "#0B0D0E"
+    ]
+  },
+  "signature": "An oversized outlined watermark word sits behind the title \u2014 transparent fill, 1px stroke. Titles are always uppercase.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Oswald",
+    "bodyFont": "Rubik",
+    "sizesPt": {
+      "display": 93.0,
+      "slideTitle": 51.0,
+      "sectionTitle": 33.0,
+      "lead": 19.5,
+      "body": 17.2,
+      "bodySm": 14.2,
+      "caption": 12.0,
+      "kicker": 12.0
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

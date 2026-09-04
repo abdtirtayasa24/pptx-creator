@@ -1,0 +1,133 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "spectrum",
+  "mood": "Bold geometric display type with a wide multi-hue accent set. High energy, high contrast.",
+  "bestFor": "Product launches, agency and portfolio decks, anything with many parallel categories that each need their own colour.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFFFFF",
+    "alt": "#F5F7FC",
+    "brand": "#6A45FF",
+    "dark": "#1B1B1B"
+  },
+  "on": {
+    "base": "#090F32",
+    "alt": "#090F32",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 18.65,
+    "alt": 17.4,
+    "brand": 5.37,
+    "dark": 17.22
+  },
+  "accent": {
+    "primary": "#FF733B",
+    "secondary": "#6A45FF",
+    "onLight": "#D3460D",
+    "onDark": "#FF733B"
+  },
+  "series": [
+    "#6A45FF",
+    "#FF8C24",
+    "#007BFF",
+    "#FF1292",
+    "#FFCD45",
+    "#FF733B"
+  ],
+  "muted": "#48494E",
+  "hairline": "#EDEDED",
+  "font": {
+    "display": {
+      "family": "Poppins",
+      "stack": "\"Gordita\", \"Poppins\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.02em",
+      "leading": 1.08
+    },
+    "body": {
+      "family": "Poppins",
+      "stack": "\"Gordita\", \"Poppins\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.62
+    },
+    "kicker": {
+      "family": "Poppins",
+      "stack": "\"Gordita\", \"Poppins\", sans-serif",
+      "weight": 500,
+      "tracking": "0.14em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+  ],
+  "scale": {
+    "display": 112,
+    "slideTitle": 64,
+    "sectionTitle": 42,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 10,
+    "chip": 30,
+    "image": 10
+  },
+  "shadow": {
+    "card": "-5px 10px 30px rgba(0,0,0,0.05)",
+    "raised": "0 30px 60px rgba(14,36,58,0.06)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#EDEDED",
+    "axis": "#48494E",
+    "label": "#090F32",
+    "series": [
+      "#6A45FF",
+      "#FF8C24",
+      "#007BFF",
+      "#FF1292",
+      "#FFCD45",
+      "#FF733B"
+    ]
+  },
+  "signature": "Negative tracking on display type; each section can claim its own accent from the series.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Poppins",
+    "bodyFont": "Poppins",
+    "sizesPt": {
+      "display": 84.0,
+      "slideTitle": 48.0,
+      "sectionTitle": 31.5,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 11.2
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  },
+  "fontNote": "Source theme uses Gordita, a commercial face. Poppins is substituted as the closest free geometric equivalent; the stack tries Gordita first if licensed."
+}

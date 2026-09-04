@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Jost:wght@400..700&family=Nunito:wght@400..800&display=swap");
+
+/* crayon — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+:root {
+  --surface:        #FFFFFF;
+  --surface-alt:    #FFF0E5;
+  --surface-brand:  #F7941E;
+  --surface-dark:   #111111;
+
+  --on-surface:       #000000;
+  --on-surface-alt:   #000000;
+  --on-surface-brand: #000000;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #F7941E;
+  --accent-2:        #1CBBB4;
+  --accent-on-light: #A96410;
+  --accent-on-dark:  #F7941E;
+  --muted:     #686868;
+  --hairline:  #E8E0D8;
+
+  --s1: #F7941E;  --s2: #1CBBB4;  --s3: #73BE48;
+  --s4: #ED145B;  --s5: #FFB259;  --s6: #5FD8D2;
+
+  --font-display: "Jost", sans-serif;
+  --font-body:    "Nunito", sans-serif;
+  --font-kicker:  "Bubblegum Sans", cursive;
+
+  --fs-display: 92px;
+  --fs-title:   54px;
+  --fs-section: 36px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  22px;
+
+  --r-card:  16px;
+  --r-chip:  999px;
+  --r-image: 24px;
+
+  --shadow-card:   0 4.8px 24.4px -6px rgba(19,16,34,0.10);
+  --shadow-raised: 0 4.4px 20px -1px rgba(19,16,34,0.05);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.slide--dark .kicker, .slide--brand .kicker { color: var(--accent-on-dark); }
+.slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }

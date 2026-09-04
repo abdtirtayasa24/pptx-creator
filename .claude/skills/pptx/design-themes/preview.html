@@ -1,0 +1,3053 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>pptx-creator slide themes</title>
+<style>
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&family=Karla:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Jost:wght@400..700&family=Nunito:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&family=Outfit:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Onest:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400..600&family=Lexend+Deca:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Source+Sans+3:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&family=Roboto:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=Rubik:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..800&family=Source+Sans+3:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400..700&family=Manrope:wght@500..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400..700&family=IBM+Plex+Sans:wght@400..700&family=Space+Grotesk:wght@500..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&family=Noto+Sans:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400..700&display=swap");
+body{margin:0;padding:40px 40px 80px;background:#ececed;font-family:system-ui,-apple-system,sans-serif;color:#1a1a1a}
+h1.top{font:700 32px system-ui;margin:0}
+.sub{color:#666;margin:6px 0 8px;font-size:15px}
+.label{font:600 21px system-ui;margin:52px 0 4px}
+.label span{font-weight:400;color:#8a8a90;font-size:14px;margin-left:10px}
+.mood{color:#666;font-size:14px;margin:0 0 14px;max-width:820px}
+.frame{width:620px;height:349px;overflow:hidden;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.16);display:inline-block;margin:0 14px 12px 0;vertical-align:top;background:#fff}
+.frame .slide{transform:scale(.4844);transform-origin:top left;display:flex;flex-direction:column}
+.swatches{margin:2px 0 0;display:flex;gap:6px;align-items:center}
+.swatches .meta{margin-left:14px;color:#8a8a90;font-size:13px}
+
+/* blush — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-blush {
+  --surface:        #FFFFFF;
+  --surface-alt:    #FFF8F8;
+  --surface-brand:  #D93030;
+  --surface-dark:   #333333;
+
+  --on-surface:       #333333;
+  --on-surface-alt:   #333333;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #FF5252;
+  --accent-2:        #333333;
+  --accent-on-light: #C62828;
+  --accent-on-dark:  #FF6C6C;
+  --muted:     #676576;
+  --hairline:  #DDDDDD;
+
+  --s1: #FF5252;  --s2: #333333;  --s3: #FF8A80;
+  --s4: #676576;  --s5: #FFB3B3;  --s6: #A3A0B5;
+
+  --font-display: "Montserrat", sans-serif;
+  --font-body:    "Roboto", sans-serif;
+  --font-kicker:  "Montserrat", sans-serif;
+
+  --fs-display: 94px;
+  --fs-title:   54px;
+  --fs-section: 36px;
+  --fs-lead:    27px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  15px;
+  --r-chip:  5px;
+  --r-image: 15px;
+
+  --shadow-card:   0 5px 38px -6px rgba(0,0,0,0.14);
+  --shadow-raised: 0 12px 48px -8px rgba(0,0,0,0.18);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-blush .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  overflow: hidden;
+  position: relative;
+}
+.t-blush .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-blush .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-blush .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-blush .slide--dark .kicker, .t-blush .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-blush .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-blush .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* meridian — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-meridian {
+  --surface:        #FFFFFF;
+  --surface-alt:    #F4F6F8;
+  --surface-brand:  #16243D;
+  --surface-dark:   #0E1829;
+
+  --on-surface:       #16243D;
+  --on-surface-alt:   #16243D;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #C77B30;
+  --accent-2:        #3E6E8E;
+  --accent-on-light: #A3692F;
+  --accent-on-dark:  #C77B30;
+  --muted:     #5A6472;
+  --hairline:  #DDE3E9;
+
+  --s1: #16243D;  --s2: #C77B30;  --s3: #3E6E8E;
+  --s4: #6B8F71;  --s5: #A3495A;  --s6: #7A8494;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body:    "Source Sans 3", sans-serif;
+  --font-kicker:  "Manrope", sans-serif;
+
+  --fs-display: 88px;
+  --fs-title:   52px;
+  --fs-section: 34px;
+  --fs-lead:    26px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 15px;
+  --fs-kicker:  14px;
+
+  --r-card:  6px;
+  --r-chip:  4px;
+  --r-image: 6px;
+
+  --shadow-card:   0 1px 3px rgba(22,36,61,0.10);
+  --shadow-raised: 0 8px 28px rgba(22,36,61,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-meridian .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-meridian .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-meridian .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-meridian .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-meridian .slide--dark .kicker, .t-meridian .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-meridian .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-meridian .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* marmalade — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-marmalade {
+  --surface:        #FFFFFF;
+  --surface-alt:    #FFF3E0;
+  --surface-brand:  #F8721F;
+  --surface-dark:   #02000F;
+
+  --on-surface:       #02000F;
+  --on-surface-alt:   #02000F;
+  --on-surface-brand: #02000F;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #F8721F;
+  --accent-2:        #F4E11B;
+  --accent-on-light: #C35613;
+  --accent-on-dark:  #F8721F;
+  --muted:     #6C6D71;
+  --hairline:  #E4E4E5;
+
+  --s1: #F8721F;  --s2: #F4E11B;  --s3: #28A745;
+  --s4: #DC3545;  --s5: #FFB539;  --s6: #6C6D71;
+
+  --font-display: "Fredoka", "Trebuchet MS", sans-serif;
+  --font-body:    "Onest", "Segoe UI", sans-serif;
+  --font-kicker:  "Onest", "Segoe UI", sans-serif;
+
+  --fs-display: 96px;
+  --fs-title:   56px;
+  --fs-section: 38px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  16px;
+  --r-chip:  999px;
+  --r-image: 20px;
+
+  --shadow-card:   0 13px 35px rgba(56,62,75,0.08);
+  --shadow-raised: 0 20px 60px rgba(204,204,204,0.30);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-marmalade .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-marmalade .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-marmalade .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-marmalade .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-marmalade .slide--dark .kicker, .t-marmalade .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-marmalade .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-marmalade .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.15;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* crayon — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-crayon {
+  --surface:        #FFFFFF;
+  --surface-alt:    #FFF0E5;
+  --surface-brand:  #F7941E;
+  --surface-dark:   #111111;
+
+  --on-surface:       #000000;
+  --on-surface-alt:   #000000;
+  --on-surface-brand: #000000;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #F7941E;
+  --accent-2:        #1CBBB4;
+  --accent-on-light: #A96410;
+  --accent-on-dark:  #F7941E;
+  --muted:     #686868;
+  --hairline:  #E8E0D8;
+
+  --s1: #F7941E;  --s2: #1CBBB4;  --s3: #73BE48;
+  --s4: #ED145B;  --s5: #FFB259;  --s6: #5FD8D2;
+
+  --font-display: "Jost", sans-serif;
+  --font-body:    "Nunito", sans-serif;
+  --font-kicker:  "Bubblegum Sans", cursive;
+
+  --fs-display: 92px;
+  --fs-title:   54px;
+  --fs-section: 36px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  22px;
+
+  --r-card:  16px;
+  --r-chip:  999px;
+  --r-image: 24px;
+
+  --shadow-card:   0 4.8px 24.4px -6px rgba(19,16,34,0.10);
+  --shadow-raised: 0 4.4px 20px -1px rgba(19,16,34,0.05);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-crayon .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-crayon .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-crayon .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-crayon .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-crayon .slide--dark .kicker, .t-crayon .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-crayon .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-crayon .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* aurora — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-aurora {
+  --surface:        #F9FBFF;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #342EAD;
+  --surface-dark:   #12103E;
+
+  --on-surface:       #12103E;
+  --on-surface-alt:   #12103E;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #FF6D5A;
+  --accent-2:        #342EAD;
+  --accent-on-light: #CC3A2A;
+  --accent-on-dark:  #FF6D5A;
+  --muted:     #767682;
+  --hairline:  #ECEBF9;
+
+  --s1: #FF6D5A;  --s2: #342EAD;  --s3: #34BC85;
+  --s4: #FF3767;  --s5: #F8D84A;  --s6: #000041;
+
+  --font-display: "Lexend Deca", sans-serif;
+  --font-body:    "Jost", sans-serif;
+  --font-kicker:  "Jost", sans-serif;
+
+  --fs-display: 100px;
+  --fs-title:   58px;
+  --fs-section: 38px;
+  --fs-lead:    30px;
+  --fs-body:    25px;
+  --fs-sm:      21px;
+  --fs-caption: 17px;
+  --fs-kicker:  17px;
+
+  --r-card:  10px;
+  --r-chip:  999px;
+  --r-image: 20px;
+
+  --shadow-card:   5px 10px 60px rgba(52,46,173,0.15);
+  --shadow-raised: 0 1px 2px rgba(52,46,173,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-aurora .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.66;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-aurora .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-aurora .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-aurora .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-aurora .slide--dark .kicker, .t-aurora .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-aurora .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-aurora .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* spectrum — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-spectrum {
+  --surface:        #FFFFFF;
+  --surface-alt:    #F5F7FC;
+  --surface-brand:  #6A45FF;
+  --surface-dark:   #1B1B1B;
+
+  --on-surface:       #090F32;
+  --on-surface-alt:   #090F32;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #FF733B;
+  --accent-2:        #6A45FF;
+  --accent-on-light: #D3460D;
+  --accent-on-dark:  #FF733B;
+  --muted:     #48494E;
+  --hairline:  #EDEDED;
+
+  --s1: #6A45FF;  --s2: #FF8C24;  --s3: #007BFF;
+  --s4: #FF1292;  --s5: #FFCD45;  --s6: #FF733B;
+
+  --font-display: "Gordita", "Poppins", sans-serif;
+  --font-body:    "Gordita", "Poppins", sans-serif;
+  --font-kicker:  "Gordita", "Poppins", sans-serif;
+
+  --fs-display: 112px;
+  --fs-title:   64px;
+  --fs-section: 42px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  15px;
+
+  --r-card:  10px;
+  --r-chip:  30px;
+  --r-image: 10px;
+
+  --shadow-card:   -5px 10px 30px rgba(0,0,0,0.05);
+  --shadow-raised: 0 30px 60px rgba(14,36,58,0.06);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-spectrum .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-spectrum .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-spectrum .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-spectrum .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-spectrum .slide--dark .kicker, .t-spectrum .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-spectrum .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-spectrum .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* foundry — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-foundry {
+  --surface:        #FFFFFF;
+  --surface-alt:    #F1F1F1;
+  --surface-brand:  #08D665;
+  --surface-dark:   #131617;
+
+  --on-surface:       #0B0D0E;
+  --on-surface-alt:   #0B0D0E;
+  --on-surface-brand: #0B0D0E;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #08D665;
+  --accent-2:        #06A950;
+  --accent-on-light: #0E8744;
+  --accent-on-dark:  #08D665;
+  --muted:     #98ADC2;
+  --hairline:  #DFDFDE;
+
+  --s1: #08D665;  --s2: #06A950;  --s3: #22CD6F;
+  --s4: #98ADC2;  --s5: #32383A;  --s6: #0B0D0E;
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-body:    "Rubik", sans-serif;
+  --font-kicker:  "Rubik", sans-serif;
+
+  --fs-display: 124px;
+  --fs-title:   68px;
+  --fs-section: 44px;
+  --fs-lead:    26px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  5px;
+  --r-chip:  4px;
+  --r-image: 5px;
+
+  --shadow-card:   0 0 3px rgba(0,0,0,0.14);
+  --shadow-raised: 0 25px 60px rgba(21,21,21,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-foundry .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-foundry .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-foundry .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-foundry .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-foundry .slide--dark .kicker, .t-foundry .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-foundry .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-foundry .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* broadsheet — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-broadsheet {
+  --surface:        #FAF7F2;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #B3402E;
+  --surface-dark:   #1A1614;
+
+  --on-surface:       #1A1614;
+  --on-surface-alt:   #1A1614;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #B3402E;
+  --accent-2:        #3E6B5A;
+  --accent-on-light: #AC4535;
+  --accent-on-dark:  #D15D4B;
+  --muted:     #6B625A;
+  --hairline:  #DED7CC;
+
+  --s1: #B3402E;  --s2: #3E6B5A;  --s3: #C9A227;
+  --s4: #7A6A58;  --s5: #8C6A9E;  --s6: #1A1614;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "Inter", sans-serif;
+  --font-kicker:  "Inter", sans-serif;
+
+  --fs-display: 104px;
+  --fs-title:   60px;
+  --fs-section: 38px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  15px;
+
+  --r-card:  4px;
+  --r-chip:  2px;
+  --r-image: 2px;
+
+  --shadow-card:   none;
+  --shadow-raised: 0 2px 12px rgba(26,22,20,0.08);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-broadsheet .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-broadsheet .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-broadsheet .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-broadsheet .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-broadsheet .slide--dark .kicker, .t-broadsheet .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-broadsheet .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-broadsheet .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* clay — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-clay {
+  --surface:        #F2EBE0;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #9E5230;
+  --surface-dark:   #2E2A26;
+
+  --on-surface:       #2E2A26;
+  --on-surface-alt:   #2E2A26;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #B5623C;
+  --accent-2:        #5A6B4A;
+  --accent-on-light: #9B593B;
+  --accent-on-dark:  #CA805E;
+  --muted:     #6E6459;
+  --hairline:  #DCD1C2;
+
+  --s1: #B5623C;  --s2: #5A6B4A;  --s3: #C99A4E;
+  --s4: #7D5A4F;  --s5: #8A9A7B;  --s6: #2E2A26;
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body:    "Karla", sans-serif;
+  --font-kicker:  "Karla", sans-serif;
+
+  --fs-display: 98px;
+  --fs-title:   56px;
+  --fs-section: 38px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  15px;
+
+  --r-card:  20px;
+  --r-chip:  999px;
+  --r-image: 24px;
+
+  --shadow-card:   none;
+  --shadow-raised: 0 8px 32px rgba(46,42,38,0.10);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-clay .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-clay .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-clay .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-clay .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-clay .slide--dark .kicker, .t-clay .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-clay .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-clay .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* linen — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-linen {
+  --surface:        #F7F5F2;
+  --surface-alt:    #E8EEF0;
+  --surface-brand:  #557E69;
+  --surface-dark:   #33403B;
+
+  --on-surface:       #33403B;
+  --on-surface-alt:   #33403B;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #7FA692;
+  --accent-2:        #D9A18A;
+  --accent-on-light: #577867;
+  --accent-on-dark:  #8CAF9D;
+  --muted:     #6C7A74;
+  --hairline:  #E0DCD5;
+
+  --s1: #7FA692;  --s2: #D9A18A;  --s3: #9A93B8;
+  --s4: #E0C879;  --s5: #6E93A6;  --s6: #B8A99A;
+
+  --font-display: "Outfit", sans-serif;
+  --font-body:    "DM Sans", sans-serif;
+  --font-kicker:  "DM Sans", sans-serif;
+
+  --fs-display: 92px;
+  --fs-title:   52px;
+  --fs-section: 34px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  15px;
+
+  --r-card:  24px;
+  --r-chip:  999px;
+  --r-image: 24px;
+
+  --shadow-card:   none;
+  --shadow-raised: 0 4px 24px rgba(51,64,59,0.06);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-linen .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-linen .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-linen .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-linen .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-linen .slide--dark .kicker, .t-linen .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-linen .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-linen .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.16;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* obsidian — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-obsidian {
+  --surface:        #13111A;
+  --surface-alt:    #000000;
+  --surface-brand:  #FFB646;
+  --surface-dark:   #13111A;
+
+  --on-surface:       #FFFFFF;
+  --on-surface-alt:   #FFFFFF;
+  --on-surface-brand: #13111A;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #FFB646;
+  --accent-2:        #F2F2F2;
+  --accent-on-light: #8A5A00;
+  --accent-on-dark:  #FFB646;
+  --muted:     rgba(255,255,255,0.72);
+  --hairline:  rgba(255,255,255,0.14);
+
+  --s1: #FFB646;  --s2: #4ECDC4;  --s3: #A78BFA;
+  --s4: #FF7A5C;  --s5: #F2F2F2;  --s6: #8C86A8;
+
+  --font-display: "Inter", sans-serif;
+  --font-body:    "General Sans", "Inter", sans-serif;
+  --font-kicker:  "Inter", sans-serif;
+
+  --fs-display: 104px;
+  --fs-title:   60px;
+  --fs-section: 40px;
+  --fs-lead:    28px;
+  --fs-body:    24px;
+  --fs-sm:      20px;
+  --fs-caption: 16px;
+  --fs-kicker:  15px;
+
+  --r-card:  10px;
+  --r-chip:  50px;
+  --r-image: 10px;
+
+  --shadow-card:   0 8px 40px rgba(0,0,0,0.45);
+  --shadow-raised: 0 20px 60px rgba(0,0,0,0.55);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-obsidian .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-obsidian .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-obsidian .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-obsidian .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-obsidian .slide--dark .kicker, .t-obsidian .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-obsidian .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-obsidian .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+/* terminal — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-terminal {
+  --surface:        #0D1117;
+  --surface-alt:    #161B22;
+  --surface-brand:  #7DF9A6;
+  --surface-dark:   #010409;
+
+  --on-surface:       #FFFFFF;
+  --on-surface-alt:   #FFFFFF;
+  --on-surface-brand: #47348b;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #7DF9A6;
+  --accent-2:        #58A6FF;
+  --accent-on-light: #0E8936;
+  --accent-on-dark:  #7DF9A6;
+  --muted:     #8B949E;
+  --hairline:  #21262D;
+
+  --s1: #7DF9A6;  --s2: #58A6FF;  --s3: #F778BA;
+  --s4: #FFA657;  --s5: #D2A8FF;  --s6: #8B949E;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body:    "Inter", sans-serif;
+  --font-kicker:  "JetBrains Mono", ui-monospace, monospace;
+
+  --fs-display: 108px;
+  --fs-title:   62px;
+  --fs-section: 40px;
+  --fs-lead:    26px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 15px;
+  --fs-kicker:  15px;
+
+  --r-card:  12px;
+  --r-chip:  8px;
+  --r-image: 12px;
+
+  --shadow-card:   none;
+  --shadow-raised: 0 16px 48px rgba(0,0,0,0.6);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-terminal .slide {
+  width: 1280px; height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.t-terminal .slide--alt   { background: var(--surface-alt);   color: var(--on-surface-alt); }
+.t-terminal .slide--brand { background: var(--surface-brand); color: var(--on-surface-brand); }
+.t-terminal .slide--dark  { background: var(--surface-dark);  color: var(--on-surface-dark); }
+
+/* on dark grounds the accent must lighten, not deepen */
+.t-terminal .slide--dark .kicker, .t-terminal .slide--brand .kicker { color: var(--accent-on-dark); }
+.t-terminal .slide--dark .card { background: rgba(255,255,255,0.06); color: var(--on-surface-dark); box-shadow: none; }
+.t-terminal .slide--dark .stat { color: var(--accent-on-dark); }
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display, .title, .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+.display       { font-size: var(--fs-display); }
+.title         { font-size: var(--fs-title); }
+.section-title { font-size: var(--fs-section); }
+
+.lead    { font-size: var(--fs-lead); color: var(--muted); margin: 0 0 var(--block-gap); }
+.caption { font-size: var(--fs-caption); color: var(--muted); }
+.measure { max-width: 62ch; }
+
+.grid { display: grid; gap: var(--gutter); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.card--flat { box-shadow: none; border: 1px solid var(--hairline); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.rule { height: 1px; background: var(--hairline); border: 0; margin: var(--block-gap) 0; }
+img, figure { border-radius: var(--r-image); max-width: 100%; }
+.stat { font-family: var(--font-display); font-size: var(--fs-display); line-height: 1; color: var(--accent-on-light); }
+
+
+
+/* vellum — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-vellum {
+  --surface:        #FBF7EE;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #7B2D3E;
+  --surface-dark:   #1B2430;
+
+  --on-surface:       #1B2430;
+  --on-surface-alt:   #1B2430;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #D79A2B;
+  --accent-2:        #7B2D3E;
+  --accent-on-light: #8A5A00;
+  --accent-on-dark:  #FFD27A;
+  --muted:           #6F6A63;
+  --hairline:        #E5DDCF;
+
+  --s1: #D79A2B;
+  --s2: #7B2D3E;
+  --s3: #476C6F;
+  --s4: #A45A52;
+  --s5: #8A7856;
+  --s6: #1B2430;
+
+  --font-display: "Playfair Display", serif;
+  --font-body:    "Source Sans 3", sans-serif;
+  --font-kicker:  "Source Sans 3", sans-serif;
+
+  --fs-display: 90px;
+  --fs-title:   52px;
+  --fs-section: 36px;
+  --fs-lead:    28px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  4px;
+  --r-chip:  999px;
+  --r-image: 6px;
+
+  --shadow-card:   0 16px 44px rgba(74,54,33,0.11);
+  --shadow-raised: 0 3px 10px rgba(74,54,33,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-vellum .slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-vellum .slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.t-vellum .slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.t-vellum .slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+
+.t-vellum .slide--dark .kicker,
+.t-vellum .slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.t-vellum .slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.t-vellum .slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.t-vellum .kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.t-vellum .display,
+.t-vellum .title,
+.t-vellum .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.t-vellum .display {
+  font-size: var(--fs-display);
+}
+
+.t-vellum .title {
+  font-size: var(--fs-title);
+}
+
+.t-vellum .section-title {
+  font-size: var(--fs-section);
+}
+
+.t-vellum .lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.t-vellum .caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.t-vellum .measure {
+  max-width: 62ch;
+}
+
+.t-vellum .grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.t-vellum .grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.t-vellum .grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.t-vellum .grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.t-vellum .card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.t-vellum .card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.t-vellum .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.t-vellum .rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+.t-vellum img,
+.t-vellum figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.t-vellum .stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+.t-vellum .card {
+  border-top: 3px solid var(--accent);
+}
+
+.t-vellum .card--flat {
+  border-top: 3px solid var(--accent);
+}
+
+/* lagoon — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-lagoon {
+  --surface:        #F2FBFA;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #006B67;
+  --surface-dark:   #0B2F36;
+
+  --on-surface:       #103B42;
+  --on-surface-alt:   #103B42;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #00A6A0;
+  --accent-2:        #2269A7;
+  --accent-on-light: #006963;
+  --accent-on-dark:  #63E5DC;
+  --muted:           #64777A;
+  --hairline:        #D8ECEA;
+
+  --s1: #008D88;
+  --s2: #2269A7;
+  --s3: #63A66F;
+  --s4: #8A68A8;
+  --s5: #D28A3A;
+  --s6: #103B42;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body:    "IBM Plex Sans", sans-serif;
+  --font-kicker:  "IBM Plex Sans", sans-serif;
+
+  --fs-display: 92px;
+  --fs-title:   54px;
+  --fs-section: 36px;
+  --fs-lead:    28px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  18px;
+  --r-chip:  999px;
+  --r-image: 18px;
+
+  --shadow-card:   0 12px 40px rgba(0,107,103,0.10);
+  --shadow-raised: 0 3px 12px rgba(0,107,103,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-lagoon .slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-lagoon .slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.t-lagoon .slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.t-lagoon .slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+
+.t-lagoon .slide--dark .kicker,
+.t-lagoon .slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.t-lagoon .slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.t-lagoon .slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.t-lagoon .kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.t-lagoon .display,
+.t-lagoon .title,
+.t-lagoon .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.t-lagoon .display {
+  font-size: var(--fs-display);
+}
+
+.t-lagoon .title {
+  font-size: var(--fs-title);
+}
+
+.t-lagoon .section-title {
+  font-size: var(--fs-section);
+}
+
+.t-lagoon .lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.t-lagoon .caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.t-lagoon .measure {
+  max-width: 62ch;
+}
+
+.t-lagoon .grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.t-lagoon .grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.t-lagoon .grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.t-lagoon .grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.t-lagoon .card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.t-lagoon .card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.t-lagoon .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.t-lagoon .rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+.t-lagoon img,
+.t-lagoon figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.t-lagoon .stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+.t-lagoon .rule {
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+/* blueprint — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-blueprint {
+  --surface:        #F6F8FF;
+  --surface-alt:    #FFFFFF;
+  --surface-brand:  #1D4ED8;
+  --surface-dark:   #10203F;
+
+  --on-surface:       #10203F;
+  --on-surface-alt:   #10203F;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #2F6BFF;
+  --accent-2:        #00A7C7;
+  --accent-on-light: #1847B8;
+  --accent-on-dark:  #78CFFF;
+  --muted:           #667089;
+  --hairline:        #DCE3F5;
+
+  --s1: #2F6BFF;
+  --s2: #00A7C7;
+  --s3: #6F54D9;
+  --s4: #2E8B57;
+  --s5: #D07A1D;
+  --s6: #10203F;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body:    "IBM Plex Sans", sans-serif;
+  --font-kicker:  "IBM Plex Mono", monospace;
+
+  --fs-display: 94px;
+  --fs-title:   54px;
+  --fs-section: 36px;
+  --fs-lead:    27px;
+  --fs-body:    22px;
+  --fs-sm:      18px;
+  --fs-caption: 15px;
+  --fs-kicker:  15px;
+
+  --r-card:  2px;
+  --r-chip:  4px;
+  --r-image: 4px;
+
+  --shadow-card:   0 8px 28px rgba(29,78,216,0.09);
+  --shadow-raised: 0 2px 8px rgba(29,78,216,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-blueprint .slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.58;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-blueprint .slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.t-blueprint .slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.t-blueprint .slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+
+.t-blueprint .slide--dark .kicker,
+.t-blueprint .slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.t-blueprint .slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.t-blueprint .slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.t-blueprint .kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.t-blueprint .display,
+.t-blueprint .title,
+.t-blueprint .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.t-blueprint .display {
+  font-size: var(--fs-display);
+}
+
+.t-blueprint .title {
+  font-size: var(--fs-title);
+}
+
+.t-blueprint .section-title {
+  font-size: var(--fs-section);
+}
+
+.t-blueprint .lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.t-blueprint .caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.t-blueprint .measure {
+  max-width: 62ch;
+}
+
+.t-blueprint .grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.t-blueprint .grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.t-blueprint .grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.t-blueprint .grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.t-blueprint .card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.t-blueprint .card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.t-blueprint .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.t-blueprint .rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+.t-blueprint img,
+.t-blueprint figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.t-blueprint .stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+.t-blueprint .slide {
+  background-image:
+    linear-gradient(rgba(29,78,216,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,78,216,.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.t-blueprint .slide--brand,
+.t-blueprint .slide--dark {
+  background-image: none;
+}
+
+.t-blueprint .caption {
+  font-family: var(--font-kicker);
+}
+
+/* grove — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-grove {
+  --surface:        #F7F7F0;
+  --surface-alt:    #FEFFF9;
+  --surface-brand:  #315B44;
+  --surface-dark:   #183528;
+
+  --on-surface:       #26352B;
+  --on-surface-alt:   #26352B;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #C9673B;
+  --accent-2:        #6F8A54;
+  --accent-on-light: #984422;
+  --accent-on-dark:  #F4A07D;
+  --muted:           #6D756B;
+  --hairline:        #DFE4D8;
+
+  --s1: #B85A34;
+  --s2: #5F7C45;
+  --s3: #3B7F78;
+  --s4: #9A6F3F;
+  --s5: #86607C;
+  --s6: #26352B;
+
+  --font-display: "DM Sans", sans-serif;
+  --font-body:    "Noto Sans", sans-serif;
+  --font-kicker:  "DM Sans", sans-serif;
+
+  --fs-display: 90px;
+  --fs-title:   53px;
+  --fs-section: 36px;
+  --fs-lead:    28px;
+  --fs-body:    23px;
+  --fs-sm:      19px;
+  --fs-caption: 16px;
+  --fs-kicker:  16px;
+
+  --r-card:  24px;
+  --r-chip:  999px;
+  --r-image: 28px;
+
+  --shadow-card:   0 10px 34px rgba(49,91,68,0.10);
+  --shadow-raised: 0 3px 10px rgba(49,91,68,0.12);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-grove .slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.64;
+  letter-spacing: 0em;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-grove .slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.t-grove .slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.t-grove .slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+
+.t-grove .slide--dark .kicker,
+.t-grove .slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.t-grove .slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.t-grove .slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.t-grove .kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.t-grove .display,
+.t-grove .title,
+.t-grove .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.t-grove .display {
+  font-size: var(--fs-display);
+}
+
+.t-grove .title {
+  font-size: var(--fs-title);
+}
+
+.t-grove .section-title {
+  font-size: var(--fs-section);
+}
+
+.t-grove .lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.t-grove .caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.t-grove .measure {
+  max-width: 62ch;
+}
+
+.t-grove .grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.t-grove .grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.t-grove .grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.t-grove .grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.t-grove .card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.t-grove .card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.t-grove .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.t-grove .rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+.t-grove img,
+.t-grove figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.t-grove .stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+/* workbench — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+.t-workbench {
+  --surface:        #FFF8D6;
+  --surface-alt:    #FFFDF4;
+  --surface-brand:  #14213D;
+  --surface-dark:   #10182B;
+
+  --on-surface:       #14213D;
+  --on-surface-alt:   #14213D;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #E94F37;
+  --accent-2:        #2A9D8F;
+  --accent-on-light: #B93523;
+  --accent-on-dark:  #FF8D78;
+  --muted:           #6E6A5F;
+  --hairline:        #DED4A7;
+
+  --s1: #E94F37;
+  --s2: #2A9D8F;
+  --s3: #E0A21A;
+  --s4: #6A5ACD;
+  --s5: #3A6EA5;
+  --s6: #14213D;
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body:    "IBM Plex Mono", monospace;
+  --font-kicker:  "IBM Plex Mono", monospace;
+
+  --fs-display: 96px;
+  --fs-title:   55px;
+  --fs-section: 37px;
+  --fs-lead:    26px;
+  --fs-body:    21px;
+  --fs-sm:      18px;
+  --fs-caption: 15px;
+  --fs-kicker:  15px;
+
+  --r-card:  0px;
+  --r-chip:  0px;
+  --r-image: 0px;
+
+  --shadow-card:   8px 8px 0 rgba(20,33,61,0.16);
+  --shadow-raised: 4px 4px 0 rgba(20,33,61,0.18);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.t-workbench .slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-workbench .slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.t-workbench .slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.t-workbench .slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+
+.t-workbench .slide--dark .kicker,
+.t-workbench .slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.t-workbench .slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.t-workbench .slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.t-workbench .kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.t-workbench .display,
+.t-workbench .title,
+.t-workbench .section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.t-workbench .display {
+  font-size: var(--fs-display);
+}
+
+.t-workbench .title {
+  font-size: var(--fs-title);
+}
+
+.t-workbench .section-title {
+  font-size: var(--fs-section);
+}
+
+.t-workbench .lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.t-workbench .caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.t-workbench .measure {
+  max-width: 62ch;
+}
+
+.t-workbench .grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.t-workbench .grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.t-workbench .grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.t-workbench .grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.t-workbench .card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.t-workbench .card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.t-workbench .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.t-workbench .rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+.t-workbench img,
+.t-workbench figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.t-workbench .stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+.t-workbench .card {
+  border: 2px solid var(--surface-brand);
+}
+
+.t-workbench .card--flat {
+  box-shadow: none;
+}
+
+.t-workbench .rule {
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0 32px,
+    transparent 32px 40px
+  );
+}
+</style></head><body>
+<h1 class="top">pptx-creator — slide themes</h1>
+<p class="sub">17 themes. Base and dark grounds shown at 48%, with the six-colour chart series below each.</p>
+
+<h2 class="label">blush</h2>
+<p class="mood">Clean and quiet. White and pale-pink grounds, one coral accent, charcoal type.</p>
+<div class="t-blush">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">SaaS, startups, service businesses, sales and onboarding decks</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#FF5252;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#333333;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FF8A80;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#676576;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FFB3B3;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#A3A0B5;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#FF5252;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#333333;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FF8A80;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#676576;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FFB3B3;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#A3A0B5;display:inline-block"></span>
+  <span class="meta">display 94px · title 54px · body 23px · radius 15px</span>
+</div>
+<h2 class="label">meridian</h2>
+<p class="mood">Institutional and restrained. Slate navy, hairline rules, copper used once per slide.</p>
+<div class="t-meridian">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Board and investor decks, annual reports, policy briefings, professional services</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#16243D;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#C77B30;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#3E6E8E;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#6B8F71;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#A3495A;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#7A8494;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#16243D;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#C77B30;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#3E6E8E;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#6B8F71;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#A3495A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#7A8494;display:inline-block"></span>
+  <span class="meta">display 88px · title 52px · body 23px · radius 6px</span>
+</div>
+<h2 class="label">marmalade</h2>
+<p class="mood">Warm, rounded and friendly. Soft orange on cream with generous curves.</p>
+<div class="t-marmalade">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Consumer products, education, community and family-facing decks, anything that should feel approachable rather than corporate</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#F8721F;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#F4E11B;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#28A745;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#DC3545;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FFB539;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#6C6D71;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#F8721F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#F4E11B;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#28A745;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#DC3545;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FFB539;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#6C6D71;display:inline-block"></span>
+  <span class="meta">display 96px · title 56px · body 24px · radius 16px</span>
+</div>
+<h2 class="label">crayon</h2>
+<p class="mood">Bright, playful and childlike. Four saturated accents on cream, with a handwritten-feel kicker.</p>
+<div class="t-crayon">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Education, childcare, non-profit, workshops, internal culture decks</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#F7941E;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#1CBBB4;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#73BE48;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#ED145B;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FFB259;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#5FD8D2;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#F7941E;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#1CBBB4;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#73BE48;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#ED145B;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FFB259;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#5FD8D2;display:inline-block"></span>
+  <span class="meta">display 92px · title 54px · body 24px · radius 16px</span>
+</div>
+<h2 class="label">aurora</h2>
+<p class="mood">Soft off-white ground, coral-to-indigo gradient headlines, generous 18px-native reading size.</p>
+<div class="t-aurora">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Personal portfolios, creative pitches, design reviews, founder decks</h1>
+    <p class="lead measure">Body copy at 25px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#FF6D5A;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#342EAD;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#34BC85;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FF3767;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#F8D84A;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#000041;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#FF6D5A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#342EAD;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#34BC85;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FF3767;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#F8D84A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#000041;display:inline-block"></span>
+  <span class="meta">display 100px · title 58px · body 25px · radius 10px</span>
+</div>
+<h2 class="label">spectrum</h2>
+<p class="mood">Bold geometric display type with a wide multi-hue accent set. High energy, high contrast.</p>
+<div class="t-spectrum">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Product launches, agency and portfolio decks, anything with many parallel categories that each need their own colour</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#6A45FF;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FF8C24;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#007BFF;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FF1292;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FFCD45;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FF733B;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#6A45FF;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FF8C24;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#007BFF;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FF1292;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FFCD45;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FF733B;display:inline-block"></span>
+  <span class="meta">display 112px · title 64px · body 24px · radius 10px</span>
+</div>
+<h2 class="label">foundry</h2>
+<p class="mood">Condensed uppercase headlines, near-black surfaces, one electric green. Industrial and loud.</p>
+<div class="t-foundry">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Sports, fitness, construction, manufacturing, event and hype decks</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#08D665;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#06A950;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#22CD6F;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#98ADC2;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#32383A;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#0B0D0E;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#08D665;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#06A950;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#22CD6F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#98ADC2;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#32383A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#0B0D0E;display:inline-block"></span>
+  <span class="meta">display 124px · title 68px · body 23px · radius 5px</span>
+</div>
+<h2 class="label">broadsheet</h2>
+<p class="mood">Editorial print. Serif display, wide margins, hairline rules, one clay red.</p>
+<div class="t-broadsheet">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Long-form narrative, research findings, annual reviews, keynote talks where a pull quote should land like a magazine spread</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#B3402E;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#3E6B5A;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#C9A227;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#7A6A58;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#8C6A9E;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#1A1614;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#B3402E;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#3E6B5A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#C9A227;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#7A6A58;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#8C6A9E;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#1A1614;display:inline-block"></span>
+  <span class="meta">display 104px · title 60px · body 24px · radius 4px</span>
+</div>
+<h2 class="label">clay</h2>
+<p class="mood">Earthy and tactile. Sand ground, terracotta and moss, soft arch shapes, no hard shadows.</p>
+<div class="t-clay">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Sustainability, craft and food brands, wellness, community work, B-Corp reporting</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#B5623C;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#5A6B4A;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#C99A4E;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#7D5A4F;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#8A9A7B;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#2E2A26;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#B5623C;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#5A6B4A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#C99A4E;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#7D5A4F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#8A9A7B;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#2E2A26;display:inline-block"></span>
+  <span class="meta">display 98px · title 56px · body 24px · radius 20px</span>
+</div>
+<h2 class="label">linen</h2>
+<p class="mood">Calm and airy. Warm off-white, sage and blush pastels, generous whitespace, no shadows.</p>
+<div class="t-linen">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Healthcare, mindfulness, HR and people decks, retrospectives, workshops</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#7FA692;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#D9A18A;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#9A93B8;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#E0C879;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#6E93A6;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#B8A99A;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#7FA692;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#D9A18A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#9A93B8;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#E0C879;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#6E93A6;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#B8A99A;display:inline-block"></span>
+  <span class="meta">display 92px · title 52px · body 24px · radius 24px</span>
+</div>
+<h2 class="label">obsidian<span>dark-first</span></h2>
+<p class="mood">Dark-first minimalism. Near-black canvas, one warm tangerine accent, tight neutral type.</p>
+<div class="t-obsidian">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Technical talks, investor decks, product architecture, anything presented in a dark room or on a large screen</h1>
+    <p class="lead measure">Body copy at 24px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#FFB646;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#4ECDC4;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#A78BFA;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FF7A5C;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#F2F2F2;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#8C86A8;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#FFB646;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#4ECDC4;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#A78BFA;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FF7A5C;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#F2F2F2;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#8C86A8;display:inline-block"></span>
+  <span class="meta">display 104px · title 60px · body 24px · radius 10px</span>
+</div>
+<h2 class="label">terminal<span>dark-first</span></h2>
+<p class="mood">Developer dark mode. Bento cards, monospace labels, one neon green against near-black.</p>
+<div class="t-terminal">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Engineering reviews, architecture walkthroughs, API and infra decks, technical demos</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#7DF9A6;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#58A6FF;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#F778BA;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#FFA657;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#D2A8FF;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#8B949E;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#7DF9A6;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#58A6FF;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#F778BA;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#FFA657;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#D2A8FF;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#8B949E;display:inline-block"></span>
+  <span class="meta">display 108px · title 62px · body 23px · radius 12px</span>
+</div>
+
+<h2 class="label">vellum</h2>
+<p class="mood">Editorial and composed. Parchment grounds, oxblood panels, ochre details, serif-led hierarchy.</p>
+<div class="t-vellum">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Annual reports, strategy narratives, cultural institutions, premium services, thought-leadership decks</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#D79A2B;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#7B2D3E;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#476C6F;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#A45A52;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#8A7856;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#1B2430;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#D79A2B;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#7B2D3E;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#476C6F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#A45A52;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#8A7856;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#1B2430;display:inline-block"></span>
+  <span class="meta">display 90px · title 52px · body 23px · radius 4px</span>
+</div>
+<h2 class="label">lagoon</h2>
+<p class="mood">Calm and analytical. Misty aqua surfaces, deep teal structure, measured blue-green accents.</p>
+<div class="t-lagoon">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Healthcare, climate, research, analytics, public-sector and evidence-heavy presentations</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#008D88;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#2269A7;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#63A66F;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#8A68A8;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#D28A3A;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#103B42;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#008D88;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#2269A7;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#63A66F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#8A68A8;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#D28A3A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#103B42;display:inline-block"></span>
+  <span class="meta">display 92px · title 54px · body 23px · radius 18px</span>
+</div>
+<h2 class="label">blueprint</h2>
+<p class="mood">Precise and systematic. Pale blueprint grid, cobalt structure, mono labels, sharp geometry.</p>
+<div class="t-blueprint">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Engineering reviews, product architecture, technical roadmaps, developer tooling, systems and operations decks</h1>
+    <p class="lead measure">Body copy at 22px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#2F6BFF;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#00A7C7;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#6F54D9;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#2E8B57;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#D07A1D;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#10203F;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#2F6BFF;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#00A7C7;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#6F54D9;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#2E8B57;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#D07A1D;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#10203F;display:inline-block"></span>
+  <span class="meta">display 94px · title 54px · body 22px · radius 2px</span>
+</div>
+<h2 class="label">grove</h2>
+<p class="mood">Grounded and human. Warm off-white, forest green, clay accents, soft organic corners.</p>
+<div class="t-grove">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Sustainability, social impact, food, agriculture, wellness, community and mission-driven organizations</h1>
+    <p class="lead measure">Body copy at 23px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#B85A34;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#5F7C45;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#3B7F78;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#9A6F3F;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#86607C;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#26352B;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#B85A34;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#5F7C45;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#3B7F78;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#9A6F3F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#86607C;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#26352B;display:inline-block"></span>
+  <span class="meta">display 90px · title 53px · body 23px · radius 24px</span>
+</div>
+<h2 class="label">workbench</h2>
+<p class="mood">Retro maker energy. Butter paper, navy ink, vermilion and teal, mono body copy, hard-edged cards.</p>
+<div class="t-workbench">
+  <div class="frame"><div class="slide">
+    <p class="kicker">Quarterly review</p>
+    <h1 class="title">Workshops, hackathons, innovation labs, creative technology, maker communities and internal ideation decks</h1>
+    <p class="lead measure">Body copy at 21px reads cleanly at projection distance.</p>
+    <div class="grid grid--3" style="margin-top:auto">
+      <div class="card"><div class="stat" style="font-size:52px">64%</div><p class="caption">Adoption</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">3.2x</div><p class="caption">Growth</p></div>
+      <div class="card"><div class="stat" style="font-size:52px">18</div><p class="caption">Markets</p></div>
+    </div>
+  </div></div>
+  <div class="frame"><div class="slide slide--dark">
+    <p class="kicker">Section</p>
+    <h1 class="title">Dark ground</h1>
+    <div style="display:flex;gap:12px;align-items:flex-end;height:150px;margin-top:28px"><div style="flex:1;background:#E94F37;height:72px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#2A9D8F;height:118px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#E0A21A;height:54px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#6A5ACD;height:136px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#3A6EA5;height:92px;border-radius:3px 3px 0 0"></div><div style="flex:1;background:#14213D;height:42px;border-radius:3px 3px 0 0"></div></div>
+    <p class="caption" style="margin-top:14px">Six-colour chart series</p>
+  </div></div>
+</div>
+<div class="swatches"><span style="width:34px;height:34px;border-radius:6px;background:#E94F37;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#2A9D8F;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#E0A21A;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#6A5ACD;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#3A6EA5;display:inline-block"></span><span style="width:34px;height:34px;border-radius:6px;background:#14213D;display:inline-block"></span>
+  <span class="meta">display 96px · title 55px · body 21px · radius 0px</span>
+</div>
+</body></html>

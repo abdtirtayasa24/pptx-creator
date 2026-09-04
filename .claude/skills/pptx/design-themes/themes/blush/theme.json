@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "blush",
+  "mood": "Clean and quiet. White and pale-pink grounds, one coral accent, charcoal type.",
+  "bestFor": "SaaS, startups, service businesses, sales and onboarding decks. The safest of the seven.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFFFFF",
+    "alt": "#FFF8F8",
+    "brand": "#D93030",
+    "dark": "#333333"
+  },
+  "on": {
+    "base": "#333333",
+    "alt": "#333333",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 12.63,
+    "alt": 12.05,
+    "brand": 4.76,
+    "dark": 12.63
+  },
+  "accent": {
+    "primary": "#FF5252",
+    "secondary": "#333333",
+    "onLight": "#C62828",
+    "onDark": "#FF6C6C"
+  },
+  "series": [
+    "#FF5252",
+    "#333333",
+    "#FF8A80",
+    "#676576",
+    "#FFB3B3",
+    "#A3A0B5"
+  ],
+  "muted": "#676576",
+  "hairline": "#DDDDDD",
+  "font": {
+    "display": {
+      "family": "Montserrat",
+      "stack": "\"Montserrat\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.01em",
+      "leading": 1.1
+    },
+    "body": {
+      "family": "Roboto",
+      "stack": "\"Roboto\", sans-serif",
+      "weight": 400,
+      "tracking": "0.01em",
+      "leading": 1.65
+    },
+    "kicker": {
+      "family": "Montserrat",
+      "stack": "\"Montserrat\", sans-serif",
+      "weight": 600,
+      "tracking": "0.10em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&family=Roboto:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 94,
+    "slideTitle": 54,
+    "sectionTitle": 36,
+    "lead": 27,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 16,
+    "kicker": 16
+  },
+  "radius": {
+    "card": 15,
+    "chip": 5,
+    "image": 15
+  },
+  "shadow": {
+    "card": "0 5px 38px -6px rgba(0,0,0,0.14)",
+    "raised": "0 12px 48px -8px rgba(0,0,0,0.18)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DDDDDD",
+    "axis": "#676576",
+    "label": "#333333",
+    "series": [
+      "#FF5252",
+      "#333333",
+      "#FF8A80",
+      "#676576",
+      "#FFB3B3",
+      "#A3A0B5"
+    ]
+  },
+  "signature": "Coral eyebrow above every section title; blush background alternates with white to separate sections.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Montserrat",
+    "bodyFont": "Roboto",
+    "sizesPt": {
+      "display": 70.5,
+      "slideTitle": 40.5,
+      "sectionTitle": 27.0,
+      "lead": 20.2,
+      "body": 17.2,
+      "bodySm": 14.2,
+      "caption": 12.0,
+      "kicker": 12.0
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

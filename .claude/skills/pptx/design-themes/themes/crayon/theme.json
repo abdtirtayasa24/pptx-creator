@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "crayon",
+  "mood": "Bright, playful and childlike. Four saturated accents on cream, with a handwritten-feel kicker.",
+  "bestFor": "Education, childcare, non-profit, workshops, internal culture decks. Anything meant to feel joyful.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFFFFF",
+    "alt": "#FFF0E5",
+    "brand": "#F7941E",
+    "dark": "#111111"
+  },
+  "on": {
+    "base": "#000000",
+    "alt": "#000000",
+    "brand": "#000000",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 21.0,
+    "alt": 18.85,
+    "brand": 9.21,
+    "dark": 18.88
+  },
+  "accent": {
+    "primary": "#F7941E",
+    "secondary": "#1CBBB4",
+    "onLight": "#A96410",
+    "onDark": "#F7941E"
+  },
+  "series": [
+    "#F7941E",
+    "#1CBBB4",
+    "#73BE48",
+    "#ED145B",
+    "#FFB259",
+    "#5FD8D2"
+  ],
+  "muted": "#686868",
+  "hairline": "#E8E0D8",
+  "font": {
+    "display": {
+      "family": "Jost",
+      "stack": "\"Jost\", sans-serif",
+      "weight": 700,
+      "tracking": "0em",
+      "leading": 1.2
+    },
+    "body": {
+      "family": "Nunito",
+      "stack": "\"Nunito\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.6
+    },
+    "kicker": {
+      "family": "Bubblegum Sans",
+      "stack": "\"Bubblegum Sans\", cursive",
+      "weight": 400,
+      "tracking": "0.02em",
+      "transform": "none"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Jost:wght@400..700&family=Nunito:wght@400..800&display=swap"
+  ],
+  "scale": {
+    "display": 92,
+    "slideTitle": 54,
+    "sectionTitle": 36,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 22
+  },
+  "radius": {
+    "card": 16,
+    "chip": 999,
+    "image": 24
+  },
+  "shadow": {
+    "card": "0 4.8px 24.4px -6px rgba(19,16,34,0.10)",
+    "raised": "0 4.4px 20px -1px rgba(19,16,34,0.05)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#E8E0D8",
+    "axis": "#686868",
+    "label": "#000000",
+    "series": [
+      "#F7941E",
+      "#1CBBB4",
+      "#73BE48",
+      "#ED145B",
+      "#FFB259",
+      "#5FD8D2"
+    ]
+  },
+  "signature": "Bubblegum Sans kicker in an accent colour above every title; one soft oversized corner on image cards.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Jost",
+    "bodyFont": "Nunito",
+    "sizesPt": {
+      "display": 69.0,
+      "slideTitle": 40.5,
+      "sectionTitle": 27.0,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 16.5
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "clay",
+  "mood": "Earthy and tactile. Sand ground, terracotta and moss, soft arch shapes, no hard shadows.",
+  "bestFor": "Sustainability, craft and food brands, wellness, community work, B-Corp reporting. Anything that should feel handmade rather than manufactured.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#F2EBE0",
+    "alt": "#FFFFFF",
+    "brand": "#9E5230",
+    "dark": "#2E2A26"
+  },
+  "on": {
+    "base": "#2E2A26",
+    "alt": "#2E2A26",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 12.02,
+    "alt": 14.23,
+    "brand": 5.67,
+    "dark": 14.23
+  },
+  "accent": {
+    "primary": "#B5623C",
+    "secondary": "#5A6B4A",
+    "onLight": "#9B593B",
+    "onDark": "#CA805E"
+  },
+  "series": [
+    "#B5623C",
+    "#5A6B4A",
+    "#C99A4E",
+    "#7D5A4F",
+    "#8A9A7B",
+    "#2E2A26"
+  ],
+  "muted": "#6E6459",
+  "hairline": "#DCD1C2",
+  "font": {
+    "display": {
+      "family": "Bricolage Grotesque",
+      "stack": "\"Bricolage Grotesque\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.015em",
+      "leading": 1.1
+    },
+    "body": {
+      "family": "Karla",
+      "stack": "\"Karla\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.65
+    },
+    "kicker": {
+      "family": "Karla",
+      "stack": "\"Karla\", sans-serif",
+      "weight": 600,
+      "tracking": "0.12em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&family=Karla:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 98,
+    "slideTitle": 56,
+    "sectionTitle": 38,
+    "lead": 28,
+    "body": 24,
+    "bodySm": 20,
+    "caption": 16,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 20,
+    "chip": 999,
+    "image": 24
+  },
+  "shadow": {
+    "card": "none",
+    "raised": "0 8px 32px rgba(46,42,38,0.10)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DCD1C2",
+    "axis": "#6E6459",
+    "label": "#2E2A26",
+    "series": [
+      "#B5623C",
+      "#5A6B4A",
+      "#C99A4E",
+      "#7D5A4F",
+      "#8A9A7B",
+      "#2E2A26"
+    ]
+  },
+  "signature": "Arch-topped image frames and 20px cards on sand. Depth comes from tonal layering, not shadow.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Bricolage Grotesque",
+    "bodyFont": "Karla",
+    "sizesPt": {
+      "display": 73.5,
+      "slideTitle": 42.0,
+      "sectionTitle": 28.5,
+      "lead": 21.0,
+      "body": 18.0,
+      "bodySm": 15.0,
+      "caption": 12.0,
+      "kicker": 11.2
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

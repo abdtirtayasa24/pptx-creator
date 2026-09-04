@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "meridian",
+  "mood": "Institutional and restrained. Slate navy, hairline rules, copper used once per slide.",
+  "bestFor": "Board and investor decks, annual reports, policy briefings, professional services. Dense tables and financial data.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFFFFF",
+    "alt": "#F4F6F8",
+    "brand": "#16243D",
+    "dark": "#0E1829"
+  },
+  "on": {
+    "base": "#16243D",
+    "alt": "#16243D",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 15.51,
+    "alt": 14.32,
+    "brand": 15.51,
+    "dark": 17.78
+  },
+  "accent": {
+    "primary": "#C77B30",
+    "secondary": "#3E6E8E",
+    "onLight": "#A3692F",
+    "onDark": "#C77B30"
+  },
+  "series": [
+    "#16243D",
+    "#C77B30",
+    "#3E6E8E",
+    "#6B8F71",
+    "#A3495A",
+    "#7A8494"
+  ],
+  "muted": "#5A6472",
+  "hairline": "#DDE3E9",
+  "font": {
+    "display": {
+      "family": "Manrope",
+      "stack": "\"Manrope\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.015em",
+      "leading": 1.12
+    },
+    "body": {
+      "family": "Source Sans 3",
+      "stack": "\"Source Sans 3\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.6
+    },
+    "kicker": {
+      "family": "Manrope",
+      "stack": "\"Manrope\", sans-serif",
+      "weight": 600,
+      "tracking": "0.14em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Source+Sans+3:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 88,
+    "slideTitle": 52,
+    "sectionTitle": 34,
+    "lead": 26,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 15,
+    "kicker": 14
+  },
+  "radius": {
+    "card": 6,
+    "chip": 4,
+    "image": 6
+  },
+  "shadow": {
+    "card": "0 1px 3px rgba(22,36,61,0.10)",
+    "raised": "0 8px 28px rgba(22,36,61,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DDE3E9",
+    "axis": "#5A6472",
+    "label": "#16243D",
+    "series": [
+      "#16243D",
+      "#C77B30",
+      "#3E6E8E",
+      "#6B8F71",
+      "#A3495A",
+      "#7A8494"
+    ]
+  },
+  "signature": "Copper appears exactly once per slide, on the number that matters. Everything else is navy, slate and hairline rules.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Manrope",
+    "bodyFont": "Source Sans 3",
+    "sizesPt": {
+      "display": 66.0,
+      "slideTitle": 39.0,
+      "sectionTitle": 25.5,
+      "lead": 19.5,
+      "body": 17.2,
+      "bodySm": 14.2,
+      "caption": 11.2,
+      "kicker": 10.5
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

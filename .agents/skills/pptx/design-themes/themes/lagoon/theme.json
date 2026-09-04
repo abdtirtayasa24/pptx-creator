@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "lagoon",
+  "mood": "Calm and analytical. Misty aqua surfaces, deep teal structure, measured blue-green accents.",
+  "bestFor": "Healthcare, climate, research, analytics, public-sector and evidence-heavy presentations.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#F2FBFA",
+    "alt": "#FFFFFF",
+    "brand": "#006B67",
+    "dark": "#0B2F36"
+  },
+  "on": {
+    "base": "#103B42",
+    "alt": "#103B42",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 10.85,
+    "alt": 11.58,
+    "brand": 6.32,
+    "dark": 13.71
+  },
+  "accent": {
+    "primary": "#00A6A0",
+    "secondary": "#2269A7",
+    "onLight": "#006963",
+    "onDark": "#63E5DC"
+  },
+  "series": [
+    "#008D88",
+    "#2269A7",
+    "#63A66F",
+    "#8A68A8",
+    "#D28A3A",
+    "#103B42"
+  ],
+  "muted": "#64777A",
+  "hairline": "#D8ECEA",
+  "font": {
+    "display": {
+      "family": "Manrope",
+      "stack": "\"Manrope\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.025em",
+      "leading": 1.1
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "stack": "\"IBM Plex Sans\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.62
+    },
+    "kicker": {
+      "family": "IBM Plex Sans",
+      "stack": "\"IBM Plex Sans\", sans-serif",
+      "weight": 600,
+      "tracking": "0.12em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400..700&family=Manrope:wght@500..800&display=swap"
+  ],
+  "scale": {
+    "display": 92,
+    "slideTitle": 54,
+    "sectionTitle": 36,
+    "lead": 28,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 16,
+    "kicker": 16
+  },
+  "radius": {
+    "card": 18,
+    "chip": 999,
+    "image": 18
+  },
+  "shadow": {
+    "card": "0 12px 40px rgba(0,107,103,0.10)",
+    "raised": "0 3px 12px rgba(0,107,103,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#D8ECEA",
+    "axis": "#64777A",
+    "label": "#103B42",
+    "series": [
+      "#008D88",
+      "#2269A7",
+      "#63A66F",
+      "#8A68A8",
+      "#D28A3A",
+      "#103B42"
+    ]
+  },
+  "signature": "Soft aqua grounds and a short teal-to-transparent rule create a clinical but humane rhythm.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Manrope",
+    "bodyFont": "IBM Plex Sans",
+    "sizesPt": {
+      "display": 69,
+      "slideTitle": 40.5,
+      "sectionTitle": 27,
+      "lead": 21,
+      "body": 17.3,
+      "bodySm": 14.3,
+      "caption": 12,
+      "kicker": 12
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

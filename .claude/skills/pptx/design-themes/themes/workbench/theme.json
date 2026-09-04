@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "workbench",
+  "mood": "Retro maker energy. Butter paper, navy ink, vermilion and teal, mono body copy, hard-edged cards.",
+  "bestFor": "Workshops, hackathons, innovation labs, creative technology, maker communities and internal ideation decks.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FFF8D6",
+    "alt": "#FFFDF4",
+    "brand": "#14213D",
+    "dark": "#10182B"
+  },
+  "on": {
+    "base": "#14213D",
+    "alt": "#14213D",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 13.95,
+    "alt": 14.75,
+    "brand": 15.09,
+    "dark": 17.31
+  },
+  "accent": {
+    "primary": "#E94F37",
+    "secondary": "#2A9D8F",
+    "onLight": "#B93523",
+    "onDark": "#FF8D78"
+  },
+  "series": [
+    "#E94F37",
+    "#2A9D8F",
+    "#E0A21A",
+    "#6A5ACD",
+    "#3A6EA5",
+    "#14213D"
+  ],
+  "muted": "#6E6A5F",
+  "hairline": "#DED4A7",
+  "font": {
+    "display": {
+      "family": "Bricolage Grotesque",
+      "stack": "\"Bricolage Grotesque\", sans-serif",
+      "weight": 800,
+      "tracking": "-0.04em",
+      "leading": 1.02
+    },
+    "body": {
+      "family": "IBM Plex Mono",
+      "stack": "\"IBM Plex Mono\", monospace",
+      "weight": 400,
+      "tracking": "-0.01em",
+      "leading": 1.55
+    },
+    "kicker": {
+      "family": "IBM Plex Mono",
+      "stack": "\"IBM Plex Mono\", monospace",
+      "weight": 700,
+      "tracking": "0.10em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 96,
+    "slideTitle": 55,
+    "sectionTitle": 37,
+    "lead": 26,
+    "body": 21,
+    "bodySm": 18,
+    "caption": 15,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 0,
+    "chip": 0,
+    "image": 0
+  },
+  "shadow": {
+    "card": "8px 8px 0 rgba(20,33,61,0.16)",
+    "raised": "4px 4px 0 rgba(20,33,61,0.18)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DED4A7",
+    "axis": "#6E6A5F",
+    "label": "#14213D",
+    "series": [
+      "#E94F37",
+      "#2A9D8F",
+      "#E0A21A",
+      "#6A5ACD",
+      "#3A6EA5",
+      "#14213D"
+    ]
+  },
+  "signature": "Offset navy block-shadows, square cards and dashed vermilion rules make slides feel assembled on a physical workbench.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Bricolage Grotesque",
+    "bodyFont": "IBM Plex Mono",
+    "sizesPt": {
+      "display": 72,
+      "slideTitle": 41.3,
+      "sectionTitle": 27.8,
+      "lead": 19.5,
+      "body": 15.8,
+      "bodySm": 13.5,
+      "caption": 11.3,
+      "kicker": 11.3
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

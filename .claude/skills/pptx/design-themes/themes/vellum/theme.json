@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "vellum",
+  "mood": "Editorial and composed. Parchment grounds, oxblood panels, ochre details, serif-led hierarchy.",
+  "bestFor": "Annual reports, strategy narratives, cultural institutions, premium services, thought-leadership decks.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#FBF7EE",
+    "alt": "#FFFFFF",
+    "brand": "#7B2D3E",
+    "dark": "#1B2430"
+  },
+  "on": {
+    "base": "#1B2430",
+    "alt": "#1B2430",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 14.52,
+    "alt": 15.64,
+    "brand": 8.11,
+    "dark": 15.64
+  },
+  "accent": {
+    "primary": "#D79A2B",
+    "secondary": "#7B2D3E",
+    "onLight": "#8A5A00",
+    "onDark": "#FFD27A"
+  },
+  "series": [
+    "#D79A2B",
+    "#7B2D3E",
+    "#476C6F",
+    "#A45A52",
+    "#8A7856",
+    "#1B2430"
+  ],
+  "muted": "#6F6A63",
+  "hairline": "#E5DDCF",
+  "font": {
+    "display": {
+      "family": "Playfair Display",
+      "stack": "\"Playfair Display\", serif",
+      "weight": 700,
+      "tracking": "-0.02em",
+      "leading": 1.08
+    },
+    "body": {
+      "family": "Source Sans 3",
+      "stack": "\"Source Sans 3\", sans-serif",
+      "weight": 400,
+      "tracking": "0.005em",
+      "leading": 1.6
+    },
+    "kicker": {
+      "family": "Source Sans 3",
+      "stack": "\"Source Sans 3\", sans-serif",
+      "weight": 700,
+      "tracking": "0.14em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600..800&family=Source+Sans+3:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 90,
+    "slideTitle": 52,
+    "sectionTitle": 36,
+    "lead": 28,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 16,
+    "kicker": 16
+  },
+  "radius": {
+    "card": 4,
+    "chip": 999,
+    "image": 6
+  },
+  "shadow": {
+    "card": "0 16px 44px rgba(74,54,33,0.11)",
+    "raised": "0 3px 10px rgba(74,54,33,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#E5DDCF",
+    "axis": "#6F6A63",
+    "label": "#1B2430",
+    "series": [
+      "#D79A2B",
+      "#7B2D3E",
+      "#476C6F",
+      "#A45A52",
+      "#8A7856",
+      "#1B2430"
+    ]
+  },
+  "signature": "A thin ochre editorial rule or top-border anchors cards and section titles; typography does most of the visual work.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Playfair Display",
+    "bodyFont": "Source Sans 3",
+    "sizesPt": {
+      "display": 67.5,
+      "slideTitle": 39,
+      "sectionTitle": 27,
+      "lead": 21,
+      "body": 17.3,
+      "bodySm": 14.3,
+      "caption": 12,
+      "kicker": 12
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

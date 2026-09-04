@@ -1,0 +1,135 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "terminal",
+  "mood": "Developer dark mode. Bento cards, monospace labels, one neon green against near-black.",
+  "bestFor": "Engineering reviews, architecture walkthroughs, API and infra decks, technical demos. Anything where the audience reads code.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#0D1117",
+    "alt": "#161B22",
+    "brand": "#7DF9A6",
+    "dark": "#010409"
+  },
+  "on": {
+    "base": "#FFFFFF",
+    "alt": "#FFFFFF",
+    "brand": "#13111A",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 18.92,
+    "alt": 17.3,
+    "brand": 14.23,
+    "dark": 20.54
+  },
+  "accent": {
+    "primary": "#7DF9A6",
+    "secondary": "#58A6FF",
+    "onLight": "#0E8936",
+    "onDark": "#7DF9A6"
+  },
+  "series": [
+    "#7DF9A6",
+    "#58A6FF",
+    "#F778BA",
+    "#FFA657",
+    "#D2A8FF",
+    "#8B949E"
+  ],
+  "muted": "#8B949E",
+  "hairline": "#21262D",
+  "font": {
+    "display": {
+      "family": "Space Grotesk",
+      "stack": "\"Space Grotesk\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.02em",
+      "leading": 1.08
+    },
+    "body": {
+      "family": "Inter",
+      "stack": "\"Inter\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.6
+    },
+    "kicker": {
+      "family": "JetBrains Mono",
+      "stack": "\"JetBrains Mono\", ui-monospace, monospace",
+      "weight": 500,
+      "tracking": "0.08em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&family=Space+Grotesk:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 108,
+    "slideTitle": 62,
+    "sectionTitle": 40,
+    "lead": 26,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 15,
+    "kicker": 15
+  },
+  "radius": {
+    "card": 12,
+    "chip": 8,
+    "image": 12
+  },
+  "shadow": {
+    "card": "none",
+    "raised": "0 16px 48px rgba(0,0,0,0.6)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#21262D",
+    "axis": "#8B949E",
+    "label": "#FFFFFF",
+    "series": [
+      "#7DF9A6",
+      "#58A6FF",
+      "#F778BA",
+      "#FFA657",
+      "#D2A8FF",
+      "#8B949E"
+    ]
+  },
+  "signature": "Bento grid of rounded cards on near-black, monospace kickers, and exactly one neon highlight per slide.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "Space Grotesk",
+    "bodyFont": "Inter",
+    "sizesPt": {
+      "display": 81.0,
+      "slideTitle": 46.5,
+      "sectionTitle": 30.0,
+      "lead": 19.5,
+      "body": 17.2,
+      "bodySm": 14.2,
+      "caption": 11.2,
+      "kicker": 11.2
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  },
+  "darkFirst": true,
+  "lightSurface": "#FFFFFF",
+  "fontNote": "JetBrains Mono is the label and code face; use it for kickers, axis labels, and any inline code, never for body copy."
+}

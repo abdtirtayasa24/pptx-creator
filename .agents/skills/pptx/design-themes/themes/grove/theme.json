@@ -1,0 +1,132 @@
+{
+  "$schema": "pptx-creator/slide-theme@1.0",
+  "id": "grove",
+  "mood": "Grounded and human. Warm off-white, forest green, clay accents, soft organic corners.",
+  "bestFor": "Sustainability, social impact, food, agriculture, wellness, community and mission-driven organizations.",
+  "canvas": {
+    "w": 1280,
+    "h": 720,
+    "aspect": "16:9",
+    "safeInset": 64,
+    "unit": "px",
+    "ptFactor": 0.75,
+    "note": "1280x720 px == 13.333in x 7.5in at 96 dpi. Multiply any px value by 0.75 for python-pptx points."
+  },
+  "surface": {
+    "base": "#F7F7F0",
+    "alt": "#FEFFF9",
+    "brand": "#315B44",
+    "dark": "#183528"
+  },
+  "on": {
+    "base": "#26352B",
+    "alt": "#26352B",
+    "brand": "#FFFFFF",
+    "dark": "#FFFFFF"
+  },
+  "contrast": {
+    "base": 11.41,
+    "alt": 12.16,
+    "brand": 7.55,
+    "dark": 13.63
+  },
+  "accent": {
+    "primary": "#C9673B",
+    "secondary": "#6F8A54",
+    "onLight": "#984422",
+    "onDark": "#F4A07D"
+  },
+  "series": [
+    "#B85A34",
+    "#5F7C45",
+    "#3B7F78",
+    "#9A6F3F",
+    "#86607C",
+    "#26352B"
+  ],
+  "muted": "#6D756B",
+  "hairline": "#DFE4D8",
+  "font": {
+    "display": {
+      "family": "DM Sans",
+      "stack": "\"DM Sans\", sans-serif",
+      "weight": 700,
+      "tracking": "-0.025em",
+      "leading": 1.1
+    },
+    "body": {
+      "family": "Noto Sans",
+      "stack": "\"Noto Sans\", sans-serif",
+      "weight": 400,
+      "tracking": "0em",
+      "leading": 1.64
+    },
+    "kicker": {
+      "family": "DM Sans",
+      "stack": "\"DM Sans\", sans-serif",
+      "weight": 700,
+      "tracking": "0.10em",
+      "transform": "uppercase"
+    }
+  },
+  "fontUrl": [
+    "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&family=Noto+Sans:wght@400..700&display=swap"
+  ],
+  "scale": {
+    "display": 90,
+    "slideTitle": 53,
+    "sectionTitle": 36,
+    "lead": 28,
+    "body": 23,
+    "bodySm": 19,
+    "caption": 16,
+    "kicker": 16
+  },
+  "radius": {
+    "card": 24,
+    "chip": 999,
+    "image": 28
+  },
+  "shadow": {
+    "card": "0 10px 34px rgba(49,91,68,0.10)",
+    "raised": "0 3px 10px rgba(49,91,68,0.12)"
+  },
+  "spacing": {
+    "unit": 8,
+    "gutter": 32,
+    "blockGap": 24,
+    "listGap": 16,
+    "titleGap": 32
+  },
+  "chart": {
+    "grid": "#DFE4D8",
+    "axis": "#6D756B",
+    "label": "#26352B",
+    "series": [
+      "#B85A34",
+      "#5F7C45",
+      "#3B7F78",
+      "#9A6F3F",
+      "#86607C",
+      "#26352B"
+    ]
+  },
+  "signature": "Generous rounded image masks and cards, forest structure, and a restrained clay highlight keep the deck warm rather than eco-cliché.",
+  "pptx": {
+    "slideWidthIn": 13.333,
+    "slideHeightIn": 7.5,
+    "displayFont": "DM Sans",
+    "bodyFont": "Noto Sans",
+    "sizesPt": {
+      "display": 67.5,
+      "slideTitle": 39.8,
+      "sectionTitle": 27,
+      "lead": 21,
+      "body": 17.3,
+      "bodySm": 14.3,
+      "caption": 12,
+      "kicker": 12
+    },
+    "note": "Fonts must be installed locally for python-pptx output; otherwise fall back to the stack's last entry."
+  }
+}

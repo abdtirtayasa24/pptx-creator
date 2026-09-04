@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400..700&display=swap");
+
+/* workbench — slide theme, Canvas 1280x720.
+   All sizes in px against that fixed canvas. */
+
+:root {
+  --surface:        #FFF8D6;
+  --surface-alt:    #FFFDF4;
+  --surface-brand:  #14213D;
+  --surface-dark:   #10182B;
+
+  --on-surface:       #14213D;
+  --on-surface-alt:   #14213D;
+  --on-surface-brand: #FFFFFF;
+  --on-surface-dark:  #FFFFFF;
+
+  --accent:          #E94F37;
+  --accent-2:        #2A9D8F;
+  --accent-on-light: #B93523;
+  --accent-on-dark:  #FF8D78;
+  --muted:           #6E6A5F;
+  --hairline:        #DED4A7;
+
+  --s1: #E94F37;
+  --s2: #2A9D8F;
+  --s3: #E0A21A;
+  --s4: #6A5ACD;
+  --s5: #3A6EA5;
+  --s6: #14213D;
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body:    "IBM Plex Mono", monospace;
+  --font-kicker:  "IBM Plex Mono", monospace;
+
+  --fs-display: 96px;
+  --fs-title:   55px;
+  --fs-section: 37px;
+  --fs-lead:    26px;
+  --fs-body:    21px;
+  --fs-sm:      18px;
+  --fs-caption: 15px;
+  --fs-kicker:  15px;
+
+  --r-card:  0px;
+  --r-chip:  0px;
+  --r-image: 0px;
+
+  --shadow-card:   8px 8px 0 rgba(20,33,61,0.16);
+  --shadow-raised: 4px 4px 0 rgba(20,33,61,0.18);
+
+  --pad: 64px;
+  --gutter: 32px;
+  --block-gap: 24px;
+}
+
+.slide {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad);
+  box-sizing: border-box;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide--alt {
+  background-color: var(--surface-alt);
+  color: var(--on-surface-alt);
+}
+
+.slide--brand {
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+}
+
+.slide--dark {
+  background: var(--surface-dark);
+  color: var(--on-surface-dark);
+}
+
+/* on dark grounds the accent must lighten, not deepen */
+.slide--dark .kicker,
+.slide--brand .kicker {
+  color: var(--accent-on-dark);
+}
+
+.slide--dark .card {
+  background: rgba(255,255,255,0.07);
+  color: var(--on-surface-dark);
+  box-shadow: none;
+}
+
+.slide--dark .stat {
+  color: var(--accent-on-dark);
+}
+
+.kicker {
+  font-family: var(--font-kicker);
+  font-size: var(--fs-kicker);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-on-light);
+  margin: 0 0 12px;
+}
+
+.display,
+.title,
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  text-transform: none;
+  margin: 0 0 var(--block-gap);
+  text-wrap: balance;
+}
+
+.display {
+  font-size: var(--fs-display);
+}
+
+.title {
+  font-size: var(--fs-title);
+}
+
+.section-title {
+  font-size: var(--fs-section);
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0 0 var(--block-gap);
+}
+
+.caption {
+  font-size: var(--fs-caption);
+  color: var(--muted);
+}
+
+.measure {
+  max-width: 62ch;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background: var(--surface-alt);
+  color: var(--on-surface-alt);
+  border-radius: var(--r-card);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.card--flat {
+  box-shadow: none;
+  border: 1px solid var(--hairline);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--r-chip);
+  padding: 10px 20px;
+  background: var(--surface-brand);
+  color: var(--on-surface-brand);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.rule {
+  height: 1px;
+  background: var(--hairline);
+  border: 0;
+  margin: var(--block-gap) 0;
+}
+
+img,
+figure {
+  border-radius: var(--r-image);
+  max-width: 100%;
+}
+
+.stat {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: 1;
+  color: var(--accent-on-light);
+}
+
+
+.card {
+  border: 2px solid var(--surface-brand);
+}
+
+.card--flat {
+  box-shadow: none;
+}
+
+.rule {
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0 32px,
+    transparent 32px 40px
+  );
+}
+
