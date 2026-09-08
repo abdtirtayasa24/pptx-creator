@@ -182,7 +182,7 @@ Images can be embedded as presentation assets. Semantic extraction from images r
 ├── .pi/prompts/pptx.md                  # Pi `/pptx` command alias
 ├── .docs/                               # Default source documents
 ├── .generated/                          # Generated outputs and QA artifacts
-├── demo/                                # Example source data and PPTX output
+├── demo/                                # Example source data and deck output
 ├── scripts/                             # Dependency checks
 ├── package.json
 ├── requirements.txt
@@ -270,13 +270,11 @@ PPTX mode uses MarkItDown plus PDF/image rendering. HTML mode uses the structura
 
 ## Demo
 
-A generated PowerPoint example is available in `demo/generated/`. Its source prompt is in `demo/demo_prompt.md`, and its source CSV files are under:
+A generated PowerPoint and HTML deck example is available in `demo/generated/`. Its source prompt is in `demo/prompt/`, and its source CSV files are under `demo/docs/`.
 
-```text
-demo/docs/global-tiktok-instagram-addiction-(2015-2060)/
-```
-
-The dataset is available from [Kaggle](https://www.kaggle.com/datasets/abdulmaliklodhra/tiktok-and-instagram-addiction-dataset-20152060).
+The dataset is available from:
+- [Kaggle - TikTok & Instagram Addiction Dataset (2015–2060)](https://www.kaggle.com/datasets/abdulmaliklodhra/tiktok-and-instagram-addiction-dataset-20152060) (PPTX deck example).
+- [Kaggle - E-Commerce Delivery Analytics Dataset](https://www.kaggle.com/datasets/datascikhan/e-commerce-delivery-and-shipping-data-2026) (HTML deck example).
 
 ## Notes and Limitations
 
